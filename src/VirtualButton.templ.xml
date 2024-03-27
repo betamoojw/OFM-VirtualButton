@@ -493,246 +493,732 @@
           </Static>
           <Dynamic>
             <ChannelIndependentBlock>
-              <!-- START INCLUDE HERE -->
-              <ParameterBlock Id="%AID%_PB-%C%1" Name="Channel%C%Page" Text="Taster %C%: {{0: ...}}" TextParameterRefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" Icon="button-pointer" HelpContext="Empty">
-                <Channel Id="%AID%_CH-BTN%CC%" Name="Channel%C%" Number="BTN%C%" Text="Taster %CC%: {{0: ...}}" TextParameterRefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001">
-                  <ParameterBlock Id="%AID%_PB-%TT%%CC%01" Name="Channel%C%Wrapper" Inline="true">
-                    <ParameterSeparator Id="%AID%_PS-nnn" Text="Tasterkonfiguration" UIHint="Headline" />
-                    <!-- Hidden -->
-                    <ParameterRefRef RefId="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" />
-                    <!-- Name -->
-                    <ParameterRefRef RefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" Icon="tag-outline" HelpContext="BTN-ChannelName" />
-                    <!-- Modus -->
-                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101" Icon="shape" HelpContext="BTN-ChannelMode" />
-                    <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                      <when test=">0">
-                        <!-- Sperre -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201" Icon="lock-outline" HelpContext="BTN-ChannelLock" />
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201">
-                          <when test="1">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%000_R-%TT%%CC%00001" />
-                          </when>
-                          <when test="2">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%000_R-%TT%%CC%00002" />
-                          </when>
-                        </choose>
-
-                        <!-- Taserteingang -->
-                        <!-- Verstecke Eingänge wenn es keine Binäreingänge gibt -->
-                        <choose ParamRefId="%AID%_P-%TT%00001_R-%TT%0000101">
-                          <when test="0">
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastereingänge" UIHint="Headline" />
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
-                              <when test="1 3">
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" Icon="import" HelpContext="BTN-ChannelInput" />
-                                <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
+              <choose ParamRefId="%AID%_UP-%TT%00014_R-%TT%0001401">
+                <when test="&gt;=%C%">
+                  <!-- START INCLUDE HERE -->
+                  <ParameterBlock Id="%AID%_PB-%C%1" Name="Channel%C%Page" Text="Taster %C%: {{0: ...}}" TextParameterRefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" Icon="button-pointer" HelpContext="Empty">
+                    <Channel Id="%AID%_CH-BTN%CC%" Name="Channel%C%" Number="BTN%C%" Text="Taster %CC%: {{0: ...}}" TextParameterRefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001">
+                      <ParameterBlock Id="%AID%_PB-%TT%%CC%01" Name="Channel%C%Wrapper" Inline="true">
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Tasterkonfiguration" UIHint="Headline" />
+                        <!-- Hidden -->
+                        <ParameterRefRef RefId="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" />
+                        <!-- Name -->
+                        <ParameterRefRef RefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" Icon="tag-outline" HelpContext="BTN-ChannelName" />
+                        <!-- Modus -->
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101" Icon="shape" HelpContext="BTN-ChannelMode" />
+                        <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                          <when test=">0">
+                            <!-- Sperre -->
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201" Icon="lock-outline" HelpContext="BTN-ChannelLock" />
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201">
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%000_R-%TT%%CC%00001" />
                               </when>
                               <when test="2">
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" Icon="import" HelpContext="BTN-ChannelInput" />
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" Icon="import" HelpContext="BTN-ChannelInput" />
-                                <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
-                                <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" SourceParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" />
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%000_R-%TT%%CC%00002" />
                               </when>
                             </choose>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Beachte, dass interne Tastereingänge in der Regel konfigurationsabhängig sind. Es ist daher meistens nötig, im jeweiligen Modul (je nach Hardware) den Tastereingang erst zu aktivieren bzw. zu konfigurieren." UIHint="Information" />
-                          </when>
-                          <when test="1">
-                            <!-- Init Params mit Access=None, damit KOs angezeigt werden. -->
-                            <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" Value="0" />
-                            <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" Value="0" />
-                          </when>
-                        </choose>
-                        
-                        <!-- Externe KOs for Inputs -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
-                          <when test="1 3">
-                            <!-- 1 Taster / Taste 1-->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109">
-                              <when test="0">
-                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%011_R-%TT%%CC%01102" />
-                              </when>
-                            </choose>
-                          </when>
-                          <when test="2">
-                            <!-- 2 Taster / Taste 1 -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109">
-                              <when test="0">
-                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%011_R-%TT%%CC%01101" />
-                              </when>
-                            </choose>
-                            <!-- 2 Taster / Taste 2 -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209">
-                              <when test="0">
-                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%012_R-%TT%%CC%01201" />
-                              </when>
-                            </choose>
-                          </when>
-                        </choose>
 
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                          <!-- 1/2-Taster -->
-                          <when test="1 2">
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Einfacher Tastendruck" UIHint="Headline" />
+                            <!-- Taserteingang -->
+                            <!-- Verstecke Eingänge wenn es keine Binäreingänge gibt -->
+                            <choose ParamRefId="%AID%_P-%TT%00001_R-%TT%0000101">
+                              <when test="0">
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastereingänge" UIHint="Headline" />
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
+                                  <when test="1 3">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" Icon="import" HelpContext="BTN-ChannelInput" />
+                                    <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
+                                  </when>
+                                  <when test="2">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" Icon="import" HelpContext="BTN-ChannelInput" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" Icon="import" HelpContext="BTN-ChannelInput" />
+                                    <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
+                                    <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" SourceParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" />
+                                  </when>
+                                </choose>
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Beachte, dass interne Tastereingänge in der Regel konfigurationsabhängig sind. Es ist daher meistens nötig, im jeweiligen Modul (je nach Hardware) den Tastereingang erst zu aktivieren bzw. zu konfigurieren." UIHint="Information" />
+                              </when>
+                              <when test="1">
+                                <!-- Init Params mit Access=None, damit KOs angezeigt werden. -->
+                                <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" Value="0" />
+                                <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" Value="0" />
+                              </when>
+                            </choose>
+                            
+                            <!-- Externe KOs for Inputs -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
+                              <when test="1 3">
+                                <!-- 1 Taster / Taste 1-->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109">
+                                  <when test="0">
+                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%011_R-%TT%%CC%01102" />
+                                  </when>
+                                </choose>
+                              </when>
+                              <when test="2">
+                                <!-- 2 Taster / Taste 1 -->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109">
+                                  <when test="0">
+                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%011_R-%TT%%CC%01101" />
+                                  </when>
+                                </choose>
+                                <!-- 2 Taster / Taste 2 -->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209">
+                                  <when test="0">
+                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%012_R-%TT%%CC%01201" />
+                                  </when>
+                                </choose>
+                              </when>
+                            </choose>
+
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                              <!-- 1/2-Taster -->
+                              <when test="1 2">
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Einfacher Tastendruck" UIHint="Headline" />
+
+                                <!-- DPT Select -->
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
+                                <!-- DPT nicht deaktiviert-->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                  <when test="!=0">
+                                    <!-- DPT3 Hinweis -->
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                      <when test="7 8">
+                                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Bei DPT3 verwendet man in der Regel beim &quot;Loslassen&quot; den passenden Stopbefehl und beim &quot;Drücken&quot; den passenden 100% Wert. (Die Bedeutung des Prozentwert ist Aktorabhängig)." UIHint="Information" />
+                                      </when>
+                                    </choose>
+
+                                    <!-- 1. Taster -->                            
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import" />
+                                    
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                      <!-- DPT1 -->
+                                      <when test="1">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%105_R-%TT%%CC%10501" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%106_R-%TT%%CC%10601" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT2 -->
+                                      <when test="2">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%109_R-%TT%%CC%10901" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%110_R-%TT%%CC%11001" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT5 -->
+                                      <when test="4">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%113_R-%TT%%CC%11301" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%114_R-%TT%%CC%11401" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT5001 -->
+                                      <when test="5">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%117_R-%TT%%CC%11701" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%118_R-%TT%%CC%11801" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT7 -->
+                                      <when test="3">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%121_R-%TT%%CC%12101" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%122_R-%TT%%CC%12201" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT18 -->
+                                      <when test="6">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%125_R-%TT%%CC%12501" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%126_R-%TT%%CC%12601" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT3007 -->
+                                      <when test="7">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%129_R-%TT%%CC%12901" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%130_R-%TT%%CC%13001" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT3008 -->
+                                      <when test="8">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%133_R-%TT%%CC%13301" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%134_R-%TT%%CC%13401" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+
+                                    <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                                      <when test="!=3">
+                                        <!-- Additional DPT1 -->     
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101">
+                                          <when test="!=0">
+                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+
+                                    <!-- 2. Taster if enabled -->    
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                                      <when test="2">
+                                        <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
+                                        <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" Icon="import" />
+
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                          <!-- DPT1 -->
+                                          <when test="1">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%107_R-%TT%%CC%10701" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%108_R-%TT%%CC%10801" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT2 -->
+                                          <when test="2">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%111_R-%TT%%CC%11101" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%112_R-%TT%%CC%11201" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT5 -->
+                                          <when test="4">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%115_R-%TT%%CC%11501" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%116_R-%TT%%CC%11601" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT5001 -->
+                                          <when test="5">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%119_R-%TT%%CC%11901" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%120_R-%TT%%CC%12001" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT7 -->
+                                          <when test="3">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%123_R-%TT%%CC%12301" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%124_R-%TT%%CC%12401" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT18 -->
+                                          <when test="6">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%127_R-%TT%%CC%12701" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%128_R-%TT%%CC%12801" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT3007 -->
+                                          <when test="7">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%131_R-%TT%%CC%13101" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%132_R-%TT%%CC%13201" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT3008 -->
+                                          <when test="8">
+                                            <!-- Event Press -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%135_R-%TT%%CC%13501" />
+                                              </when>
+                                            </choose>
+
+                                            <!-- Event Release -->
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                              <when test="1">
+                                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%136_R-%TT%%CC%13601" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                        </choose>
+
+                                        <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                                          <when test="!=3">
+                                            <!-- Additional DPT1 -->     
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201">
+                                              <when test="!=0">
+                                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+                                  </when>
+                                </choose>
+                              </when>
+                              <when test="3">
+                                <!-- MCBLOCK -->
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Mehrfach-Tastendruck" UIHint="Headline" />
+
+                                <!-- DPT Select -->
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
+                                <!-- DPT nicht deaktiviert-->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                                  <when test="!=0">
+                                    <!-- 1. Klick -->
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101" Icon="import" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101">
+                                      <when test="1">
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                                          <!-- DPT1 -->
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%404_R-%TT%%CC%40401" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%404_R-%TT%%CC%40401">
+                                              <when test="!=0">
+                                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10402" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT2 -->
+                                          <when test="2">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%407_R-%TT%%CC%40701" />
+                                          </when>
+                                          <!-- DPT5 -->
+                                          <when test="4">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%410_R-%TT%%CC%41001" />
+                                          </when>
+                                          <!-- DPT5001 -->
+                                          <when test="5">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%413_R-%TT%%CC%41301" />
+                                          </when>
+                                          <!-- DPT7 -->
+                                          <when test="3">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%416_R-%TT%%CC%41601" />
+                                          </when>
+                                          <!-- DPT18 -->
+                                          <when test="6">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%419_R-%TT%%CC%41901" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+                                    <!-- 2. Klick -->
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201" Icon="import" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201">
+                                      <when test="1">
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                                          <!-- DPT1 -->
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%405_R-%TT%%CC%40501" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%405_R-%TT%%CC%40501">
+                                              <when test="!=0">
+                                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10502" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT2 -->
+                                          <when test="2">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%408_R-%TT%%CC%40801" />
+                                          </when>
+                                          <!-- DPT5 -->
+                                          <when test="4">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%411_R-%TT%%CC%41101" />
+                                          </when>
+                                          <!-- DPT5001 -->
+                                          <when test="5">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%414_R-%TT%%CC%41401" />
+                                          </when>
+                                          <!-- DPT7 -->
+                                          <when test="3">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%417_R-%TT%%CC%41701" />
+                                          </when>
+                                          <!-- DPT18 -->
+                                          <when test="6">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%420_R-%TT%%CC%42001" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+                                    <!-- 3. Klick -->
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301" Icon="import" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301">
+                                      <when test="1">
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                                          <!-- DPT1 -->
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%406_R-%TT%%CC%40601" />
+                                            <choose ParamRefId="%AID%_UP-%TT%%CC%406_R-%TT%%CC%40601">
+                                              <when test="!=0">
+                                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10602" />
+                                              </when>
+                                            </choose>
+                                          </when>
+                                          <!-- DPT2 -->
+                                          <when test="2">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%409_R-%TT%%CC%40901" />
+                                          </when>
+                                          <!-- DPT5 -->
+                                          <when test="4">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%412_R-%TT%%CC%41201" />
+                                          </when>
+                                          <!-- DPT5001 -->
+                                          <when test="5">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%415_R-%TT%%CC%41501" />
+                                          </when>
+                                          <!-- DPT7 -->
+                                          <when test="3">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%418_R-%TT%%CC%41801" />
+                                          </when>
+                                          <!-- DPT18 -->
+                                          <when test="6">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%421_R-%TT%%CC%42101" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+                                  </when>
+                                </choose>
+
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                                  <when test="0 1">
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901">
+                                      <when test="1">
+                                        <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10199" />
+                                      </when>
+                                    </choose>
+                                  </when>
+                                </choose>
+                              </when>
+                            </choose>
+
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Langer Tastendruck" UIHint="Headline" />
 
                             <!-- DPT Select -->
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
                             <!-- DPT nicht deaktiviert-->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                               <when test="!=0">
                                 <!-- DPT3 Hinweis -->
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                                   <when test="7 8">
                                     <ParameterSeparator Id="%AID%_PS-nnn" Text="Bei DPT3 verwendet man in der Regel beim &quot;Loslassen&quot; den passenden Stopbefehl und beim &quot;Drücken&quot; den passenden 100% Wert. (Die Bedeutung des Prozentwert ist Aktorabhängig)." UIHint="Information" />
                                   </when>
                                 </choose>
-
                                 <!-- 1. Taster -->                            
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import"/>
                                 
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                                   <!-- DPT1 -->
                                   <when test="1">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%105_R-%TT%%CC%10501" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%205_R-%TT%%CC%20501" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%106_R-%TT%%CC%10601" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%206_R-%TT%%CC%20601" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT2 -->
                                   <when test="2">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%109_R-%TT%%CC%10901" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%209_R-%TT%%CC%20901" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%110_R-%TT%%CC%11001" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%210_R-%TT%%CC%21001" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT5 -->
                                   <when test="4">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%113_R-%TT%%CC%11301" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%213_R-%TT%%CC%21301" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%114_R-%TT%%CC%11401" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%214_R-%TT%%CC%21401" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT5001 -->
                                   <when test="5">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%117_R-%TT%%CC%11701" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%217_R-%TT%%CC%21701" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%118_R-%TT%%CC%11801" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%218_R-%TT%%CC%21801" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT7 -->
                                   <when test="3">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%121_R-%TT%%CC%12101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%221_R-%TT%%CC%22101" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%122_R-%TT%%CC%12201" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%222_R-%TT%%CC%22201" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT18 -->
                                   <when test="6">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%125_R-%TT%%CC%12501" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%225_R-%TT%%CC%22501" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%126_R-%TT%%CC%12601" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%226_R-%TT%%CC%22601" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT3007 -->
                                   <when test="7">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%129_R-%TT%%CC%12901" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%229_R-%TT%%CC%22901" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%130_R-%TT%%CC%13001" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%230_R-%TT%%CC%23001" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT3008 -->
                                   <when test="8">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%133_R-%TT%%CC%13301" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%233_R-%TT%%CC%23301" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%134_R-%TT%%CC%13401" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%234_R-%TT%%CC%23401" />
                                       </when>
                                     </choose>
                                   </when>
@@ -742,10 +1228,10 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="!=3">
                                     <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101">
                                       <when test="!=0">
-                                        <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
+                                        <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
                                       </when>
                                     </choose>
                                   </when>
@@ -757,148 +1243,148 @@
                                     <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
                                     <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" Icon="import" />
 
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                                       <!-- DPT1 -->
                                       <when test="1">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%107_R-%TT%%CC%10701" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%207_R-%TT%%CC%20701" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%108_R-%TT%%CC%10801" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%208_R-%TT%%CC%20801" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT2 -->
                                       <when test="2">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%111_R-%TT%%CC%11101" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%112_R-%TT%%CC%11201" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT5 -->
                                       <when test="4">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%115_R-%TT%%CC%11501" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%215_R-%TT%%CC%21501" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%116_R-%TT%%CC%11601" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%216_R-%TT%%CC%21601" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT5001 -->
                                       <when test="5">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%119_R-%TT%%CC%11901" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%219_R-%TT%%CC%21901" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%120_R-%TT%%CC%12001" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%220_R-%TT%%CC%22001" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT7 -->
                                       <when test="3">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%123_R-%TT%%CC%12301" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%223_R-%TT%%CC%22301" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%124_R-%TT%%CC%12401" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%224_R-%TT%%CC%22401" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT18 -->
                                       <when test="6">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%127_R-%TT%%CC%12701" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%227_R-%TT%%CC%22701" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%128_R-%TT%%CC%12801" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%228_R-%TT%%CC%22801" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT3007 -->
                                       <when test="7">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%131_R-%TT%%CC%13101" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%231_R-%TT%%CC%23101" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%132_R-%TT%%CC%13201" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%232_R-%TT%%CC%23201" />
                                           </when>
                                         </choose>
                                       </when>
                                       <!-- DPT3008 -->
                                       <when test="8">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%135_R-%TT%%CC%13501" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%235_R-%TT%%CC%23501" />
                                           </when>
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                           <when test="1">
-                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%136_R-%TT%%CC%13601" />
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%236_R-%TT%%CC%23601" />
                                           </when>
                                         </choose>
                                       </when>
@@ -908,831 +1394,181 @@
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                       <when test="!=3">
                                         <!-- Additional DPT1 -->     
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201">
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201">
                                           <when test="!=0">
-                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
+                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
                                           </when>
                                         </choose>
                                       </when>
                                     </choose>
                                   </when>
                                 </choose>
+
+
                               </when>
                             </choose>
-                          </when>
-                          <when test="3">
-                            <!-- MCBLOCK -->
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Mehrfach-Tastendruck" UIHint="Headline" />
+                                
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Extralanger Tastendruck" UIHint="Headline" />
 
                             <!-- DPT Select -->
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
                             <!-- DPT nicht deaktiviert-->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
                               <when test="!=0">
-                                <!-- 1. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101" Icon="import" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101">
-                                  <when test="1">
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
-                                      <!-- DPT1 -->
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%404_R-%TT%%CC%40401" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%404_R-%TT%%CC%40401">
-                                          <when test="!=0">
-                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10402" />
-                                          </when>
-                                        </choose>
-                                      </when>
-                                      <!-- DPT2 -->
-                                      <when test="2">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%407_R-%TT%%CC%40701" />
-                                      </when>
-                                      <!-- DPT5 -->
-                                      <when test="4">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%410_R-%TT%%CC%41001" />
-                                      </when>
-                                      <!-- DPT5001 -->
-                                      <when test="5">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%413_R-%TT%%CC%41301" />
-                                      </when>
-                                      <!-- DPT7 -->
-                                      <when test="3">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%416_R-%TT%%CC%41601" />
-                                      </when>
-                                      <!-- DPT18 -->
-                                      <when test="6">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%419_R-%TT%%CC%41901" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                </choose>
-                                <!-- 2. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201" Icon="import" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201">
-                                  <when test="1">
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
-                                      <!-- DPT1 -->
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%405_R-%TT%%CC%40501" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%405_R-%TT%%CC%40501">
-                                          <when test="!=0">
-                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10502" />
-                                          </when>
-                                        </choose>
-                                      </when>
-                                      <!-- DPT2 -->
-                                      <when test="2">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%408_R-%TT%%CC%40801" />
-                                      </when>
-                                      <!-- DPT5 -->
-                                      <when test="4">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%411_R-%TT%%CC%41101" />
-                                      </when>
-                                      <!-- DPT5001 -->
-                                      <when test="5">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%414_R-%TT%%CC%41401" />
-                                      </when>
-                                      <!-- DPT7 -->
-                                      <when test="3">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%417_R-%TT%%CC%41701" />
-                                      </when>
-                                      <!-- DPT18 -->
-                                      <when test="6">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%420_R-%TT%%CC%42001" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                </choose>
-                                <!-- 3. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301" Icon="import" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301">
-                                  <when test="1">
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
-                                      <!-- DPT1 -->
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%406_R-%TT%%CC%40601" />
-                                        <choose ParamRefId="%AID%_UP-%TT%%CC%406_R-%TT%%CC%40601">
-                                          <when test="!=0">
-                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10602" />
-                                          </when>
-                                        </choose>
-                                      </when>
-                                      <!-- DPT2 -->
-                                      <when test="2">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%409_R-%TT%%CC%40901" />
-                                      </when>
-                                      <!-- DPT5 -->
-                                      <when test="4">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%412_R-%TT%%CC%41201" />
-                                      </when>
-                                      <!-- DPT5001 -->
-                                      <when test="5">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%415_R-%TT%%CC%41501" />
-                                      </when>
-                                      <!-- DPT7 -->
-                                      <when test="3">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%418_R-%TT%%CC%41801" />
-                                      </when>
-                                      <!-- DPT18 -->
-                                      <when test="6">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%421_R-%TT%%CC%42101" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
-                              <when test="0 1">
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901">
-                                  <when test="1">
-                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10199" />
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-                          </when>
-                        </choose>
-
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Langer Tastendruck" UIHint="Headline" />
-
-                        <!-- DPT Select -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
-                        <!-- DPT nicht deaktiviert-->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                          <when test="!=0">
-                            <!-- DPT3 Hinweis -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                              <when test="7 8">
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Bei DPT3 verwendet man in der Regel beim &quot;Loslassen&quot; den passenden Stopbefehl und beim &quot;Drücken&quot; den passenden 100% Wert. (Die Bedeutung des Prozentwert ist Aktorabhängig)." UIHint="Information" />
-                              </when>
-                            </choose>
-                            <!-- 1. Taster -->                            
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import"/>
-                            
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                              <!-- DPT1 -->
-                              <when test="1">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%205_R-%TT%%CC%20501" />
+                                <!-- DPT3 Hinweis -->
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
+                                  <when test="7 8">
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text="Bei DPT3 verwendet man in der Regel beim &quot;Loslassen&quot; den passenden Stopbefehl und beim &quot;Drücken&quot; den passenden 100% Wert. (Die Bedeutung des Prozentwert ist Aktorabhängig)." UIHint="Information" />
                                   </when>
                                 </choose>
 
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%206_R-%TT%%CC%20601" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT2 -->
-                              <when test="2">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%209_R-%TT%%CC%20901" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%210_R-%TT%%CC%21001" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT5 -->
-                              <when test="4">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%213_R-%TT%%CC%21301" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%214_R-%TT%%CC%21401" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT5001 -->
-                              <when test="5">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%217_R-%TT%%CC%21701" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%218_R-%TT%%CC%21801" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT7 -->
-                              <when test="3">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%221_R-%TT%%CC%22101" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%222_R-%TT%%CC%22201" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT18 -->
-                              <when test="6">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%225_R-%TT%%CC%22501" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%226_R-%TT%%CC%22601" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT3007 -->
-                              <when test="7">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%229_R-%TT%%CC%22901" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%230_R-%TT%%CC%23001" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT3008 -->
-                              <when test="8">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%233_R-%TT%%CC%23301" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%234_R-%TT%%CC%23401" />
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-                            <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                              <when test="!=3">
-                                <!-- Additional DPT1 -->     
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101">
-                                  <when test="!=0">
-                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-                            <!-- 2. Taster if enabled -->    
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                              <when test="2">
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" Icon="import" />
-
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                                  <!-- DPT1 -->
-                                  <when test="1">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%207_R-%TT%%CC%20701" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%208_R-%TT%%CC%20801" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT2 -->
-                                  <when test="2">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT5 -->
-                                  <when test="4">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%215_R-%TT%%CC%21501" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%216_R-%TT%%CC%21601" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT5001 -->
-                                  <when test="5">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%219_R-%TT%%CC%21901" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%220_R-%TT%%CC%22001" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT7 -->
-                                  <when test="3">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%223_R-%TT%%CC%22301" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%224_R-%TT%%CC%22401" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT18 -->
-                                  <when test="6">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%227_R-%TT%%CC%22701" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%228_R-%TT%%CC%22801" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT3007 -->
-                                  <when test="7">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%231_R-%TT%%CC%23101" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%232_R-%TT%%CC%23201" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                  <!-- DPT3008 -->
-                                  <when test="8">
-                                    <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%235_R-%TT%%CC%23501" />
-                                      </when>
-                                    </choose>
-
-                                    <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
-                                      <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%236_R-%TT%%CC%23601" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                </choose>
-
-                                <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                                  <when test="!=3">
-                                    <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201">
-                                      <when test="!=0">
-                                        <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
-                                      </when>
-                                    </choose>
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-
-                          </when>
-                        </choose>
-                            
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Extralanger Tastendruck" UIHint="Headline" />
-
-                        <!-- DPT Select -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001" Icon="database-export-outline" HelpContext="BTN-DptSelect" />
-                        <!-- DPT nicht deaktiviert-->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
-                          <when test="!=0">
-                            <!-- DPT3 Hinweis -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
-                              <when test="7 8">
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Bei DPT3 verwendet man in der Regel beim &quot;Loslassen&quot; den passenden Stopbefehl und beim &quot;Drücken&quot; den passenden 100% Wert. (Die Bedeutung des Prozentwert ist Aktorabhängig)." UIHint="Information" />
-                              </when>
-                            </choose>
-
-                            <!-- 1. Taster -->                            
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import"/>
-                            
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
-                              <!-- DPT1 -->
-                              <when test="1">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%305_R-%TT%%CC%30501" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%306_R-%TT%%CC%30601" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT2 -->
-                              <when test="2">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%309_R-%TT%%CC%30901" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%310_R-%TT%%CC%31001" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT5 -->
-                              <when test="4">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%313_R-%TT%%CC%31301" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%314_R-%TT%%CC%31401" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT5001 -->
-                              <when test="5">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%317_R-%TT%%CC%31701" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%318_R-%TT%%CC%31801" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT7 -->
-                              <when test="3">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%321_R-%TT%%CC%32101" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%322_R-%TT%%CC%32201" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT18 -->
-                              <when test="6">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%325_R-%TT%%CC%32501" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%326_R-%TT%%CC%32601" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT3007 -->
-                              <when test="7">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%329_R-%TT%%CC%32901" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%330_R-%TT%%CC%33001" />
-                                  </when>
-                                </choose>
-                              </when>
-                              <!-- DPT3008 -->
-                              <when test="8">
-                                <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%333_R-%TT%%CC%33301" />
-                                  </when>
-                                </choose>
-
-                                <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
-                                  <when test="1">
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%334_R-%TT%%CC%33401" />
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-                            <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                              <when test="!=3">
-                                <!-- Additional DPT1 -->     
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                <choose ParamRefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101">
-                                  <when test="!=0">
-                                    <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10601" />
-                                  </when>
-                                </choose>
-                              </when>
-                            </choose>
-
-                            <!-- 2. Taster if enabled -->    
-                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                              <when test="2">
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" Icon="import" />
-
+                                <!-- 1. Taster -->                            
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" Icon="import"/>
+                                
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
                                   <!-- DPT1 -->
                                   <when test="1">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%307_R-%TT%%CC%30701" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%305_R-%TT%%CC%30501" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%308_R-%TT%%CC%30801" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%306_R-%TT%%CC%30601" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT2 -->
                                   <when test="2">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%309_R-%TT%%CC%30901" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%310_R-%TT%%CC%31001" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT5 -->
                                   <when test="4">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%315_R-%TT%%CC%31501" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%313_R-%TT%%CC%31301" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%316_R-%TT%%CC%31601" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%314_R-%TT%%CC%31401" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT5001 -->
                                   <when test="5">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%319_R-%TT%%CC%31901" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%317_R-%TT%%CC%31701" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%320_R-%TT%%CC%32001" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%318_R-%TT%%CC%31801" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT7 -->
                                   <when test="3">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%323_R-%TT%%CC%32301" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%321_R-%TT%%CC%32101" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%324_R-%TT%%CC%32401" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%322_R-%TT%%CC%32201" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT18 -->
                                   <when test="6">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%327_R-%TT%%CC%32701" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%325_R-%TT%%CC%32501" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%328_R-%TT%%CC%32801" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%326_R-%TT%%CC%32601" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT3007 -->
                                   <when test="7">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%331_R-%TT%%CC%33101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%329_R-%TT%%CC%32901" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%332_R-%TT%%CC%33201" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%330_R-%TT%%CC%33001" />
                                       </when>
                                     </choose>
                                   </when>
                                   <!-- DPT3008 -->
                                   <when test="8">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%335_R-%TT%%CC%33501" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%333_R-%TT%%CC%33301" />
                                       </when>
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%336_R-%TT%%CC%33601" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%334_R-%TT%%CC%33401" />
                                       </when>
                                     </choose>
                                   </when>
@@ -1742,292 +1578,460 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="!=3">
                                     <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
-                                    <choose ParamRefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201">
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101">
                                       <when test="!=0">
                                         <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10601" />
                                       </when>
                                     </choose>
                                   </when>
                                 </choose>
+
+                                <!-- 2. Taster if enabled -->    
+                                <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                                  <when test="2">
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" Icon="import" />
+
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
+                                      <!-- DPT1 -->
+                                      <when test="1">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%307_R-%TT%%CC%30701" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%308_R-%TT%%CC%30801" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT2 -->
+                                      <when test="2">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT5 -->
+                                      <when test="4">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%315_R-%TT%%CC%31501" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%316_R-%TT%%CC%31601" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT5001 -->
+                                      <when test="5">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%319_R-%TT%%CC%31901" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%320_R-%TT%%CC%32001" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT7 -->
+                                      <when test="3">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%323_R-%TT%%CC%32301" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%324_R-%TT%%CC%32401" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT18 -->
+                                      <when test="6">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" Icon="gesture-tap-hold" HelpContext="BTN-ChannelPress" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%327_R-%TT%%CC%32701" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%328_R-%TT%%CC%32801" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT3007 -->
+                                      <when test="7">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%331_R-%TT%%CC%33101" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%332_R-%TT%%CC%33201" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                      <!-- DPT3008 -->
+                                      <when test="8">
+                                        <!-- Event Press -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%335_R-%TT%%CC%33501" />
+                                          </when>
+                                        </choose>
+
+                                        <!-- Event Release -->
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
+                                          <when test="1">
+                                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%336_R-%TT%%CC%33601" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+
+                                    <!-- Zeigt ein weitere DPT1 wenn keine Mehrachklick aktiv ist -->
+                                    <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                                      <when test="!=3">
+                                        <!-- Additional DPT1 -->     
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201" Icon="numeric-2-circle-outline" HelpContext="BTN-ChannelAdditionalOutput" />
+                                        <choose ParamRefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201">
+                                          <when test="!=0">
+                                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10601" />
+                                          </when>
+                                        </choose>
+                                      </when>
+                                    </choose>
+                                  </when>
+                                </choose>
                               </when>
                             </choose>
-                          </when>
-                        </choose>
 
-                        <!-- Main Output KOs -->
-                        <!-- Short -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
-                          <when test="1">
-                            <!-- DPT1 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10101" />
-                          </when>
-                          <when test="2">
-                            <!-- DPT2 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10102" />
-                          </when>
-                          <when test="4">
-                            <!-- DPT5 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10104" />
-                          </when>
-                          <when test="5">
-                            <!-- DPT5001 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10105" />
-                          </when>
-                          <when test="6">
-                            <!-- DPT18 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10106" />
-                          </when>
-                          <when test="7">
-                            <!-- DPT3007 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10107" />
-                          </when>
-                          <when test="8">
-                            <!-- DPT3008 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10108" />
-                          </when>
-                          <when test="3">
-                            <!-- DPT7 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10109" />
-                          </when>
-                        </choose>
-                        <!-- Long -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                          <when test="1">
-                            <!-- DPT1 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10201" />
-                          </when>
-                          <when test="2">
-                            <!-- DPT2 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10202" />
-                          </when>
-                          <when test="4">
-                            <!-- DPT5 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10204" />
-                          </when>
-                          <when test="5">
-                            <!-- DPT5001 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10205" />
-                          </when>
-                          <when test="6">
-                            <!-- DPT18 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10206" />
-                          </when>
-                          <when test="7">
-                            <!-- DPT3007 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10207" />
-                          </when>
-                          <when test="8">
-                            <!-- DPT3008 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10208" />
-                          </when>
-                          <when test="3">
-                            <!-- DPT7 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10209" />
-                          </when>
-                        </choose>
-                        <!-- ExtraLong -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
-                          <when test="1">
-                            <!-- DPT1 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10301" />
-                          </when>
-                          <when test="2">
-                            <!-- DPT2 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10302" />
-                          </when>
-                          <when test="4">
-                            <!-- DPT5 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10304" />
-                          </when>
-                          <when test="5">
-                            <!-- DPT5001 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10305" />
-                          </when>
-                          <when test="6">
-                            <!-- DPT18 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10306" />
-                          </when>
-                          <when test="7">
-                            <!-- DPT3007 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10307" />
-                          </when>
-                          <when test="8">
-                            <!-- DPT3008 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10308" />
-                          </when>
-                          <when test="3">
-                            <!-- DPT7 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10309" />
-                          </when>
-                        </choose>
-                        <!-- MC -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
-                          <when test="2">
-                            <!-- DPT2 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10102" />
-                          </when>
-                          <when test="4">
-                            <!-- DPT5 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10104" />
-                          </when>
-                          <when test="5">
-                            <!-- DPT5001 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10105" />
-                          </when>
-                          <when test="6">
-                            <!-- DPT18 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10106" />
-                          </when>
-                          <when test="7">
-                            <!-- DPT3007 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10107" />
-                          </when>
-                          <when test="8">
-                            <!-- DPT3008 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10108" />
-                          </when>
-                          <when test="3">
-                            <!-- DPT7 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10109" />
-                          </when>
-                        </choose>
-                        
-                        <!-- Main Status KOs -->
-                        <!-- Short DPT -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
-                          <when test="1 2">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%021_R-%TT%%CC%02101" />
-                          </when>
-                          <when test="7 8">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%021_R-%TT%%CC%02102" />
-                          </when>
-                        </choose>
-                        <!-- Long DPT -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
-                          <when test="1 2">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%022_R-%TT%%CC%02201" />
-                          </when>
-                          <when test="7 8">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%022_R-%TT%%CC%02202" />
-                          </when>
-                        </choose>
-                        <!-- ExtraLong DPT -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
-                          <when test="1 2">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%023_R-%TT%%CC%02301" />
-                          </when>
-                          <when test="7 8">
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%023_R-%TT%%CC%02302" />
-                          </when>
-                        </choose>
+                            <!-- Main Output KOs -->
+                            <!-- Short -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                              <when test="1">
+                                <!-- DPT1 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10101" />
+                              </when>
+                              <when test="2">
+                                <!-- DPT2 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10102" />
+                              </when>
+                              <when test="4">
+                                <!-- DPT5 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10104" />
+                              </when>
+                              <when test="5">
+                                <!-- DPT5001 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10105" />
+                              </when>
+                              <when test="6">
+                                <!-- DPT18 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10106" />
+                              </when>
+                              <when test="7">
+                                <!-- DPT3007 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10107" />
+                              </when>
+                              <when test="8">
+                                <!-- DPT3008 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10108" />
+                              </when>
+                              <when test="3">
+                                <!-- DPT7 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10109" />
+                              </when>
+                            </choose>
+                            <!-- Long -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
+                              <when test="1">
+                                <!-- DPT1 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10201" />
+                              </when>
+                              <when test="2">
+                                <!-- DPT2 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10202" />
+                              </when>
+                              <when test="4">
+                                <!-- DPT5 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10204" />
+                              </when>
+                              <when test="5">
+                                <!-- DPT5001 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10205" />
+                              </when>
+                              <when test="6">
+                                <!-- DPT18 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10206" />
+                              </when>
+                              <when test="7">
+                                <!-- DPT3007 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10207" />
+                              </when>
+                              <when test="8">
+                                <!-- DPT3008 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10208" />
+                              </when>
+                              <when test="3">
+                                <!-- DPT7 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%102_R-%TT%%CC%10209" />
+                              </when>
+                            </choose>
+                            <!-- ExtraLong -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
+                              <when test="1">
+                                <!-- DPT1 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10301" />
+                              </when>
+                              <when test="2">
+                                <!-- DPT2 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10302" />
+                              </when>
+                              <when test="4">
+                                <!-- DPT5 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10304" />
+                              </when>
+                              <when test="5">
+                                <!-- DPT5001 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10305" />
+                              </when>
+                              <when test="6">
+                                <!-- DPT18 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10306" />
+                              </when>
+                              <when test="7">
+                                <!-- DPT3007 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10307" />
+                              </when>
+                              <when test="8">
+                                <!-- DPT3008 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10308" />
+                              </when>
+                              <when test="3">
+                                <!-- DPT7 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%103_R-%TT%%CC%10309" />
+                              </when>
+                            </choose>
+                            <!-- MC -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
+                              <when test="2">
+                                <!-- DPT2 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10102" />
+                              </when>
+                              <when test="4">
+                                <!-- DPT5 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10104" />
+                              </when>
+                              <when test="5">
+                                <!-- DPT5001 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10105" />
+                              </when>
+                              <when test="6">
+                                <!-- DPT18 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10106" />
+                              </when>
+                              <when test="7">
+                                <!-- DPT3007 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10107" />
+                              </when>
+                              <when test="8">
+                                <!-- DPT3008 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10108" />
+                              </when>
+                              <when test="3">
+                                <!-- DPT7 -->
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10109" />
+                              </when>
+                            </choose>
+                            
+                            <!-- Main Status KOs -->
+                            <!-- Short DPT -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
+                              <when test="1 2">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%021_R-%TT%%CC%02101" />
+                              </when>
+                              <when test="7 8">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%021_R-%TT%%CC%02102" />
+                              </when>
+                            </choose>
+                            <!-- Long DPT -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
+                              <when test="1 2">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%022_R-%TT%%CC%02201" />
+                              </when>
+                              <when test="7 8">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%022_R-%TT%%CC%02202" />
+                              </when>
+                            </choose>
+                            <!-- ExtraLong DPT -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
+                              <when test="1 2">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%023_R-%TT%%CC%02301" />
+                              </when>
+                              <when test="7 8">
+                                <ComObjectRefRef RefId="%AID%_O-%TT%%CC%023_R-%TT%%CC%02302" />
+                              </when>
+                            </choose>
 
-                        <!-- Check all possible 12 Values for active 1-Taster -->
-                        <!-- Short -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%129_R-%TT%%CC%12901">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%130_R-%TT%%CC%13001">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%131_R-%TT%%CC%13101">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%132_R-%TT%%CC%13201">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <!-- Long -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%229_R-%TT%%CC%22901">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%230_R-%TT%%CC%23001">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%231_R-%TT%%CC%23101">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%232_R-%TT%%CC%23201">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <!-- ExtraLong -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%329_R-%TT%%CC%32901">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%330_R-%TT%%CC%33001">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%331_R-%TT%%CC%33101">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%332_R-%TT%%CC%33201">
-                          <when test="17">
-                            <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
-                          </when>
-                        </choose>
+                            <!-- Check all possible 12 Values for active 1-Taster -->
+                            <!-- Short -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%129_R-%TT%%CC%12901">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%130_R-%TT%%CC%13001">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%131_R-%TT%%CC%13101">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%132_R-%TT%%CC%13201">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <!-- Long -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%229_R-%TT%%CC%22901">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%230_R-%TT%%CC%23001">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%231_R-%TT%%CC%23101">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%232_R-%TT%%CC%23201">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <!-- ExtraLong -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%329_R-%TT%%CC%32901">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%330_R-%TT%%CC%33001">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%331_R-%TT%%CC%33101">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%332_R-%TT%%CC%33201">
+                              <when test="17">
+                                <Assign TargetParamRefRef="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" Value="1" />
+                              </when>
+                            </choose>
 
-                        <!-- Dynamischer 1-Taster DimStatus -->
-                        <choose ParamRefId="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301">
-                          <when test="1">
+                            <!-- Dynamischer 1-Taster DimStatus -->
+                            <choose ParamRefId="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301">
+                              <when test="1">
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Dynamischer 1-Tasterstatus" UIHint="Headline" />
+                                <ParameterBlock Id="%AID%_PB-nnn" Name="Input%C%DynamicStatus" Inline="true" Layout="Grid">
+                                  <Rows>
+                                    <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                                  </Rows>
+                                  <Columns>
+                                    <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                    <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="35%" />
+                                    <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="20%" />
+                                  </Columns>
+                                  <ParameterSeparator Id="%AID%_PS-nnn" Text="Rückfallzeit" Cell="1,1" />
+                                  <ParameterRefRef RefId="%AID%_UP-%TT%%CC%062_R-%TT%%CC%06201" Cell="1,2" />
+                                  <ParameterRefRef RefId="%AID%_UP-%TT%%CC%061_R-%TT%%CC%06101" Cell="1,3" />
+                                </ParameterBlock>
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%060_R-%TT%%CC%06001" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="Basierend auf dem Aktorstatus und dem Schwellwert wird so die nächste Richtung bei 1-Tastersteuerung ermittelt. Dabei verhindert die Rückfallzeit, dass während der Bedienung der Status geändert wird.  Deaktivieren mit Rückfallzeit 0." UIHint="Information" />
+                              </when>
+                            </choose>
+
+                            <!-- ReacionTime -->
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Dynamischer 1-Tasterstatus" UIHint="Headline" />
-                            <ParameterBlock Id="%AID%_PB-nnn" Name="Input%C%DynamicStatus" Inline="true" Layout="Grid">
-                              <Rows>
-                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                              </Rows>
-                              <Columns>
-                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="35%" />
-                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="20%" />
-                              </Columns>
-                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Rückfallzeit" Cell="1,1" />
-                              <ParameterRefRef RefId="%AID%_UP-%TT%%CC%062_R-%TT%%CC%06201" Cell="1,2" />
-                              <ParameterRefRef RefId="%AID%_UP-%TT%%CC%061_R-%TT%%CC%06101" Cell="1,3" />
-                            </ParameterBlock>
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%060_R-%TT%%CC%06001" />
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Basierend auf dem Aktorstatus und dem Schwellwert wird so die nächste Richtung bei 1-Tastersteuerung ermittelt. Dabei verhindert die Rückfallzeit, dass während der Bedienung der Status geändert wird.  Deaktivieren mit Rückfallzeit 0." UIHint="Information" />
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Reaktionszeiten" UIHint="Headline" />
+                            <!-- MC -->
+                            <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
+                              <when test="3">
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%051_R-%TT%%CC%05101" Icon="timer-outline" HelpContext="BTN-ReactionTimeMultiClick" />
+                              </when>
+                            </choose>
+                            <!-- Long -->
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%052_R-%TT%%CC%05201" Icon="timer-outline" HelpContext="BTN-ReactionTimeLong" />
+                            <!-- ExtraLong -->
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%053_R-%TT%%CC%05301" Icon="timer-outline" HelpContext="BTN-ReactionTimeExtraLong" />
                           </when>
                         </choose>
-
-                        <!-- ReacionTime -->
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Reaktionszeiten" UIHint="Headline" />
-                        <!-- MC -->
-                        <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
-                          <when test="3">
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%051_R-%TT%%CC%05101" Icon="timer-outline" HelpContext="BTN-ReactionTimeMultiClick" />
-                          </when>
-                        </choose>
-                        <!-- Long -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%052_R-%TT%%CC%05201" Icon="timer-outline" HelpContext="BTN-ReactionTimeLong" />
-                        <!-- ExtraLong -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%053_R-%TT%%CC%05301" Icon="timer-outline" HelpContext="BTN-ReactionTimeExtraLong" />
-                      </when>
-                    </choose>
+                      </ParameterBlock>
+                    </Channel>
                   </ParameterBlock>
-                </Channel>
-              </ParameterBlock>
+                </when>
+              </choose>
             </ChannelIndependentBlock>
           </Dynamic>
         </ApplicationProgram>

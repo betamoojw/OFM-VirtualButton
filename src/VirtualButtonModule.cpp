@@ -13,7 +13,7 @@ const std::string VirtualButtonModule::version()
 
 void VirtualButtonModule::setup()
 {
-    for (uint8_t i = 0; i < BTN_ChannelCount; i++)
+    for (uint8_t i = 0; i < ParamBTN_VisibleChannels; i++)
     {
         _channels[i] = new VirtualButtonChannel(i);
         _channels[i]->setup();
@@ -22,21 +22,23 @@ void VirtualButtonModule::setup()
 
 void VirtualButtonModule::loop()
 {
+    if (ParamBTN_VisibleChannels == 0) return;
+
     uint8_t processed = 0;
     do
         _channels[_currentChannel]->loop();
-    while (openknx.freeLoopIterate(BTN_ChannelCount, _currentChannel, processed));
+    while (openknx.freeLoopIterate(ParamBTN_VisibleChannels, _currentChannel, processed));
 }
 
 void VirtualButtonModule::processInputKo(GroupObject& iKo)
 {
-    for (uint8_t i = 0; i < BTN_ChannelCount; i++)
+    for (uint8_t i = 0; i < ParamBTN_VisibleChannels; i++)
         _channels[i]->processInputKo(iKo);
 }
 
 void VirtualButtonModule::processAfterStartupDelay()
 {
-    for (uint8_t i = 0; i < BTN_ChannelCount; i++)
+    for (uint8_t i = 0; i < ParamBTN_VisibleChannels; i++)
         _channels[i]->readStatus();
 }
 
