@@ -512,7 +512,7 @@
           </Static>
           <Dynamic>
             <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="Main" Text="Virtuelle Taster" HelpContext="BTN-Dokumentation" Icon="button-pointer">
-              <ParameterBlock Id="%AID%_PB-nnn" Name="Settings" Text="Einstellungen" Icon="cog-outline" HelpContext="BTN-Dokumentation">
+              <ParameterBlock Id="%AID%_PB-nnn" Name="Basic" Text="Allgemein" Icon="cog-outline" HelpContext="BTN-Dokumentation">
                 <!-- Hidden -->
                 <ParameterRefRef RefId="%AID%_P-%TT%00001_R-%TT%0000101" />
 
