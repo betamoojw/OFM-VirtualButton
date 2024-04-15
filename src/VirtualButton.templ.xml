@@ -1274,7 +1274,7 @@
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%212_R-%TT%%CC%21201" />
                                       </when>
                                     </choose>
                                   </when>
@@ -1624,7 +1624,7 @@
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" Icon="gesture-tap" HelpContext="BTN-ChannelRelease" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%312_R-%TT%%CC%31201" />
                                       </when>
                                     </choose>
                                   </when>
@@ -1878,14 +1878,6 @@
                           <when test="6">
                             <!-- DPT18 -->
                             <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10106" />
-                          </when>
-                          <when test="7">
-                            <!-- DPT3007 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10107" />
-                          </when>
-                          <when test="8">
-                            <!-- DPT3008 -->
-                            <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10108" />
                           </when>
                           <when test="3">
                             <!-- DPT7 -->
