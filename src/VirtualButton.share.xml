@@ -523,11 +523,11 @@
 
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Reaktionszeiten" UIHint="Headline" />
                 <!-- MC -->
-                <ParameterRefRef RefId="%AID%_UP-%TT%00011_R-%TT%0001101" Icon="timer-outline" IndentLevel="1" HelpContext="BTN-ReactionTimeMultiClick"/>
+                <ParameterRefRef RefId="%AID%_UP-%TT%00011_R-%TT%0001101" IndentLevel="1" HelpContext="BTN-ReactionTimeMultiClick"/>
                 <!-- Long -->
-                <ParameterRefRef RefId="%AID%_UP-%TT%00012_R-%TT%0001201" Icon="timer-outline" IndentLevel="1" HelpContext="BTN-ReactionTimeLong" />
+                <ParameterRefRef RefId="%AID%_UP-%TT%00012_R-%TT%0001201" IndentLevel="1" HelpContext="BTN-ReactionTimeLong" />
                 <!-- ExtraLong -->
-                <ParameterRefRef RefId="%AID%_UP-%TT%00013_R-%TT%0001301" Icon="timer-outline" IndentLevel="1" HelpContext="BTN-ReactionTimeExtraLong" />
+                <ParameterRefRef RefId="%AID%_UP-%TT%00013_R-%TT%0001301" IndentLevel="1" HelpContext="BTN-ReactionTimeExtraLong" />
                 
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Modulversion: %ModuleVersion%" UIHint="Headline" />
