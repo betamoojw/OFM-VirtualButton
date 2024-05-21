@@ -20,8 +20,8 @@
               <!-- Inputs -->
               <Union SizeInBit="32">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="1" BitOffset="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%091" Name="b%C%InA" Offset="0" BitOffset="0" ParameterType="%AID%_PT-BTNInputs" Text="1. Taster" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%092" Name="b%C%InB" Offset="2" BitOffset="0" ParameterType="%AID%_PT-BTNInputs" Text="2. Taster" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%091" Name="b%C%InA" Offset="0" BitOffset="0" ParameterType="%AID%_PT-BTNInputs" Text="   1. Taster" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%092" Name="b%C%InB" Offset="2" BitOffset="0" ParameterType="%AID%_PT-BTNInputs" Text="   2. Taster" Value="0" />
               </Union>
 
               <!-- ReactionTime -->
@@ -78,9 +78,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%307" Name="b%C%OutExtraLong_T2_Dpt1_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
                 <Parameter Id="%AID%_UP-%TT%%CC%308" Name="b%C%OutExtraLong_T2_Dpt1_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%404" Name="b%C%OutMulti_Click1_Dpt1"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
-                <Parameter Id="%AID%_UP-%TT%%CC%405" Name="b%C%OutMulti_Click2_Dpt1"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
-                <Parameter Id="%AID%_UP-%TT%%CC%406" Name="b%C%OutMulti_Click3_Dpt1"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%404" Name="b%C%OutMulti_Click1_Dpt1"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%405" Name="b%C%OutMulti_Click2_Dpt1"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%406" Name="b%C%OutMulti_Click3_Dpt1"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt1" Text="" Value="1" />
               </Union>
 
               <Union SizeInBit="240">
@@ -98,9 +98,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%311" Name="b%C%OutExtraLong_T2_Dpt2_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
                 <Parameter Id="%AID%_UP-%TT%%CC%312" Name="b%C%OutExtraLong_T2_Dpt2_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%407" Name="b%C%OutMulti_Click1_Dpt2"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%408" Name="b%C%OutMulti_Click2_Dpt2"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%409" Name="b%C%OutMulti_Click3_Dpt2"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%407" Name="b%C%OutMulti_Click1_Dpt2"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%408" Name="b%C%OutMulti_Click2_Dpt2"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%409" Name="b%C%OutMulti_Click3_Dpt2"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt2" Text="" Value="0" />
               </Union>
 
               <Union SizeInBit="240">
@@ -118,9 +118,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%315" Name="b%C%OutExtraLong_T2_Dpt5_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
                 <Parameter Id="%AID%_UP-%TT%%CC%316" Name="b%C%OutExtraLong_T2_Dpt5_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%410" Name="b%C%OutMulti_Click1_Dpt5"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%411" Name="b%C%OutMulti_Click2_Dpt5"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%412" Name="b%C%OutMulti_Click3_Dpt5"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%410" Name="b%C%OutMulti_Click1_Dpt5"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%411" Name="b%C%OutMulti_Click2_Dpt5"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%412" Name="b%C%OutMulti_Click3_Dpt5"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5" Text="" Value="0" />
               </Union>
 
               <Union SizeInBit="240">
@@ -138,9 +138,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%319" Name="b%C%OutExtraLong_T2_Dpt5001_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
                 <Parameter Id="%AID%_UP-%TT%%CC%320" Name="b%C%OutExtraLong_T2_Dpt5001_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%413" Name="b%C%OutMulti_Click1_Dpt5001"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
-                <Parameter Id="%AID%_UP-%TT%%CC%414" Name="b%C%OutMulti_Click2_Dpt5001"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
-                <Parameter Id="%AID%_UP-%TT%%CC%415" Name="b%C%OutMulti_Click3_Dpt5001"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
+                <Parameter Id="%AID%_UP-%TT%%CC%413" Name="b%C%OutMulti_Click1_Dpt5001"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
+                <Parameter Id="%AID%_UP-%TT%%CC%414" Name="b%C%OutMulti_Click2_Dpt5001"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
+                <Parameter Id="%AID%_UP-%TT%%CC%415" Name="b%C%OutMulti_Click3_Dpt5001"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt5001" Text="" Value="0" SuffixText="%" />
               </Union>
 
               <Union SizeInBit="240">
@@ -158,9 +158,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%323" Name="b%C%OutExtraLong_T2_Dpt7_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
                 <Parameter Id="%AID%_UP-%TT%%CC%324" Name="b%C%OutExtraLong_T2_Dpt7_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%416" Name="b%C%OutMulti_Click1_Dpt7"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%417" Name="b%C%OutMulti_Click2_Dpt7"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
-                <Parameter Id="%AID%_UP-%TT%%CC%418" Name="b%C%OutMulti_Click3_Dpt7"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%416" Name="b%C%OutMulti_Click1_Dpt7"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%417" Name="b%C%OutMulti_Click2_Dpt7"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
+                <Parameter Id="%AID%_UP-%TT%%CC%418" Name="b%C%OutMulti_Click3_Dpt7"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt7" Text="" Value="0" />
               </Union>
 
               <Union SizeInBit="240">
@@ -178,9 +178,9 @@
                 <Parameter Id="%AID%_UP-%TT%%CC%327" Name="b%C%OutExtraLong_T2_Dpt18_Press"   Offset="20" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
                 <Parameter Id="%AID%_UP-%TT%%CC%328" Name="b%C%OutExtraLong_T2_Dpt18_Release" Offset="22" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
 
-                <Parameter Id="%AID%_UP-%TT%%CC%419" Name="b%C%OutMulti_Click1_Dpt18"              Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
-                <Parameter Id="%AID%_UP-%TT%%CC%420" Name="b%C%OutMulti_Click2_Dpt18"              Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
-                <Parameter Id="%AID%_UP-%TT%%CC%421" Name="b%C%OutMulti_Click3_Dpt18"              Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%419" Name="b%C%OutMulti_Click1_Dpt18"         Offset="24" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%420" Name="b%C%OutMulti_Click2_Dpt18"         Offset="26" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
+                <Parameter Id="%AID%_UP-%TT%%CC%421" Name="b%C%OutMulti_Click3_Dpt18"         Offset="28" BitOffset="0" ParameterType="%AID%_PT-BTNOutputDpt18" Text="" Value="1" />
               </Union>
 
               <Union SizeInBit="240">
@@ -501,13 +501,13 @@
                     <!-- Hidden -->
                     <ParameterRefRef RefId="%AID%_P-%TT%%CC%003_R-%TT%%CC%00301" />
                     <!-- Name -->
-                    <ParameterRefRef RefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" HelpContext="BTN-ChannelName" />
+                    <ParameterRefRef RefId="%AID%_P-%TT%%CC%000_R-%TT%%CC%00001" IndentLevel="1" HelpContext="BTN-ChannelName" />
                     <!-- Modus -->
-                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101" HelpContext="BTN-ChannelMode" />
+                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101" IndentLevel="1" HelpContext="BTN-ChannelMode" />
                     <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                       <when test=">0">
                         <!-- Sperre -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201" HelpContext="BTN-ChannelLock" />
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201" IndentLevel="1" HelpContext="BTN-ChannelLock" />
                         <choose ParamRefId="%AID%_UP-%TT%%CC%002_R-%TT%%CC%00201">
                           <when test="1">
                             <ComObjectRefRef RefId="%AID%_O-%TT%%CC%000_R-%TT%%CC%00001" />
@@ -525,12 +525,12 @@
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastereingänge" UIHint="Headline" />
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
                               <when test="1 3">
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" HelpContext="BTN-ChannelInput" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" IndentLevel="1" HelpContext="BTN-ChannelInput" />
                                 <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
                               </when>
                               <when test="2">
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" HelpContext="BTN-ChannelInput" />
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" HelpContext="BTN-ChannelInput" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" IndentLevel="1" HelpContext="BTN-ChannelInput" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" IndentLevel="1" HelpContext="BTN-ChannelInput" />
                                 <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" SourceParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09101" />
                                 <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" SourceParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09201" />
                               </when>
@@ -577,7 +577,7 @@
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Einfacher Tastendruck" UIHint="Headline" />
 
                             <!-- DPT Select -->
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001" HelpContext="BTN-DptSelect" />
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001" HelpContext="BTN-DptSelect" IndentLevel="1" />
                             <!-- DPT nicht deaktiviert-->
                             <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
                               <when test="!=0">
@@ -589,13 +589,13 @@
                                 </choose>
 
                                 <!-- 1. Taster -->                            
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="   1. Taster" />
                                 
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
                                   <!-- DPT1 -->
                                   <when test="1">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%105_R-%TT%%CC%10501" />
@@ -603,7 +603,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%106_R-%TT%%CC%10601" />
@@ -613,7 +613,7 @@
                                   <!-- DPT2 -->
                                   <when test="2">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%109_R-%TT%%CC%10901" />
@@ -621,7 +621,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%110_R-%TT%%CC%11001" />
@@ -631,7 +631,7 @@
                                   <!-- DPT5 -->
                                   <when test="4">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%113_R-%TT%%CC%11301" />
@@ -639,7 +639,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%114_R-%TT%%CC%11401" />
@@ -649,7 +649,7 @@
                                   <!-- DPT5001 -->
                                   <when test="5">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%117_R-%TT%%CC%11701" />
@@ -657,7 +657,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%118_R-%TT%%CC%11801" />
@@ -667,7 +667,7 @@
                                   <!-- DPT7 -->
                                   <when test="3">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%121_R-%TT%%CC%12101" />
@@ -675,7 +675,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%122_R-%TT%%CC%12201" />
@@ -685,7 +685,7 @@
                                   <!-- DPT18 -->
                                   <when test="6">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10101">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%125_R-%TT%%CC%12501" />
@@ -693,7 +693,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%126_R-%TT%%CC%12601" />
@@ -703,7 +703,7 @@
                                   <!-- DPT3007 -->
                                   <when test="7">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%129_R-%TT%%CC%12901" />
@@ -711,7 +711,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%130_R-%TT%%CC%13001" />
@@ -721,7 +721,7 @@
                                   <!-- DPT3008 -->
                                   <when test="8">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%101_R-%TT%%CC%10102">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%133_R-%TT%%CC%13301" />
@@ -729,7 +729,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%102_R-%TT%%CC%10201">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%134_R-%TT%%CC%13401" />
@@ -742,7 +742,7 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="!=3">
                                     <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%191_R-%TT%%CC%19101">
                                       <when test="!=0">
                                         <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
@@ -755,13 +755,13 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="2">
                                     <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                    <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" />
+                                    <ParameterSeparator Id="%AID%_PS-nnn" Text="   2. Taster" />
 
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%100_R-%TT%%CC%10001">
                                       <!-- DPT1 -->
                                       <when test="1">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%107_R-%TT%%CC%10701" />
@@ -769,7 +769,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%108_R-%TT%%CC%10801" />
@@ -779,7 +779,7 @@
                                       <!-- DPT2 -->
                                       <when test="2">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%111_R-%TT%%CC%11101" />
@@ -787,7 +787,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%112_R-%TT%%CC%11201" />
@@ -797,7 +797,7 @@
                                       <!-- DPT5 -->
                                       <when test="4">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%115_R-%TT%%CC%11501" />
@@ -805,7 +805,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%116_R-%TT%%CC%11601" />
@@ -815,7 +815,7 @@
                                       <!-- DPT5001 -->
                                       <when test="5">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%119_R-%TT%%CC%11901" />
@@ -823,7 +823,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%120_R-%TT%%CC%12001" />
@@ -833,7 +833,7 @@
                                       <!-- DPT7 -->
                                       <when test="3">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%123_R-%TT%%CC%12301" />
@@ -841,7 +841,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%124_R-%TT%%CC%12401" />
@@ -851,7 +851,7 @@
                                       <!-- DPT18 -->
                                       <when test="6">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10301">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%127_R-%TT%%CC%12701" />
@@ -859,7 +859,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%128_R-%TT%%CC%12801" />
@@ -869,7 +869,7 @@
                                       <!-- DPT3007 -->
                                       <when test="7">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%131_R-%TT%%CC%13101" />
@@ -877,7 +877,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%132_R-%TT%%CC%13201" />
@@ -887,7 +887,7 @@
                                       <!-- DPT3008 -->
                                       <when test="8">
                                         <!-- Event Press -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%103_R-%TT%%CC%10302">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%135_R-%TT%%CC%13501" />
@@ -895,7 +895,7 @@
                                         </choose>
 
                                         <!-- Event Release -->
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%104_R-%TT%%CC%10401">
                                           <when test="1">
                                             <ParameterRefRef RefId="%AID%_UP-%TT%%CC%136_R-%TT%%CC%13601" />
@@ -908,7 +908,7 @@
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                       <when test="!=3">
                                         <!-- Additional DPT1 -->     
-                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                         <choose ParamRefId="%AID%_UP-%TT%%CC%192_R-%TT%%CC%19201">
                                           <when test="!=0">
                                             <ComObjectRefRef RefId="%AID%_O-%TT%%CC%104_R-%TT%%CC%10401" />
@@ -926,12 +926,12 @@
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Mehrfach-Tastendruck" UIHint="Headline" />
 
                             <!-- DPT Select -->
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001" HelpContext="BTN-DptSelect" />
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001" HelpContext="BTN-DptSelect" IndentLevel="1" />
                             <!-- DPT nicht deaktiviert-->
                             <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
                               <when test="!=0">
                                 <!-- 1. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101" IndentLevel="1" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%401_R-%TT%%CC%40101">
                                   <when test="1">
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
@@ -968,7 +968,7 @@
                                   </when>
                                 </choose>
                                 <!-- 2. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201" IndentLevel="1" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%402_R-%TT%%CC%40201">
                                   <when test="1">
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
@@ -1005,7 +1005,7 @@
                                   </when>
                                 </choose>
                                 <!-- 3. Klick -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301" IndentLevel="1" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%403_R-%TT%%CC%40301">
                                   <when test="1">
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
@@ -1047,7 +1047,7 @@
                             <choose ParamRefId="%AID%_UP-%TT%%CC%400_R-%TT%%CC%40001">
                               <when test="0 1">
                                 <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901" IndentLevel="1" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%499_R-%TT%%CC%49901">
                                   <when test="1">
                                     <ComObjectRefRef RefId="%AID%_O-%TT%%CC%101_R-%TT%%CC%10199" />
@@ -1062,7 +1062,7 @@
                         <ParameterSeparator Id="%AID%_PS-nnn" Text="Langer Tastendruck" UIHint="Headline" />
 
                         <!-- DPT Select -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001" HelpContext="BTN-DptSelect" />
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001" HelpContext="BTN-DptSelect" IndentLevel="1" />
                         <!-- DPT nicht deaktiviert-->
                         <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                           <when test="!=0">
@@ -1073,13 +1073,13 @@
                               </when>
                             </choose>
                             <!-- 1. Taster -->                            
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster"/>
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="   1. Taster"/>
                             
                             <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                               <!-- DPT1 -->
                               <when test="1">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%205_R-%TT%%CC%20501" />
@@ -1087,7 +1087,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%206_R-%TT%%CC%20601" />
@@ -1097,7 +1097,7 @@
                               <!-- DPT2 -->
                               <when test="2">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%209_R-%TT%%CC%20901" />
@@ -1105,7 +1105,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%210_R-%TT%%CC%21001" />
@@ -1115,7 +1115,7 @@
                               <!-- DPT5 -->
                               <when test="4">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%213_R-%TT%%CC%21301" />
@@ -1123,7 +1123,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%214_R-%TT%%CC%21401" />
@@ -1133,7 +1133,7 @@
                               <!-- DPT5001 -->
                               <when test="5">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%217_R-%TT%%CC%21701" />
@@ -1141,7 +1141,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%218_R-%TT%%CC%21801" />
@@ -1151,7 +1151,7 @@
                               <!-- DPT7 -->
                               <when test="3">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%221_R-%TT%%CC%22101" />
@@ -1159,7 +1159,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%222_R-%TT%%CC%22201" />
@@ -1169,7 +1169,7 @@
                               <!-- DPT18 -->
                               <when test="6">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%225_R-%TT%%CC%22501" />
@@ -1177,7 +1177,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%226_R-%TT%%CC%22601" />
@@ -1187,7 +1187,7 @@
                               <!-- DPT3007 -->
                               <when test="7">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%229_R-%TT%%CC%22901" />
@@ -1195,7 +1195,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%230_R-%TT%%CC%23001" />
@@ -1205,7 +1205,7 @@
                               <!-- DPT3008 -->
                               <when test="8">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%201_R-%TT%%CC%20102">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%233_R-%TT%%CC%23301" />
@@ -1213,7 +1213,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%202_R-%TT%%CC%20201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%234_R-%TT%%CC%23401" />
@@ -1226,7 +1226,7 @@
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                               <when test="!=3">
                                 <!-- Additional DPT1 -->     
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%291_R-%TT%%CC%29101">
                                   <when test="!=0">
                                     <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
@@ -1239,13 +1239,13 @@
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                               <when test="2">
                                 <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="   2. Taster" />
 
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%200_R-%TT%%CC%20001">
                                   <!-- DPT1 -->
                                   <when test="1">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%207_R-%TT%%CC%20701" />
@@ -1253,7 +1253,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%208_R-%TT%%CC%20801" />
@@ -1263,7 +1263,7 @@
                                   <!-- DPT2 -->
                                   <when test="2">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%211_R-%TT%%CC%21101" />
@@ -1271,7 +1271,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%212_R-%TT%%CC%21201" />
@@ -1281,7 +1281,7 @@
                                   <!-- DPT5 -->
                                   <when test="4">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%215_R-%TT%%CC%21501" />
@@ -1289,7 +1289,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%216_R-%TT%%CC%21601" />
@@ -1299,7 +1299,7 @@
                                   <!-- DPT5001 -->
                                   <when test="5">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%219_R-%TT%%CC%21901" />
@@ -1307,7 +1307,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%220_R-%TT%%CC%22001" />
@@ -1317,7 +1317,7 @@
                                   <!-- DPT7 -->
                                   <when test="3">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%223_R-%TT%%CC%22301" />
@@ -1325,7 +1325,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%224_R-%TT%%CC%22401" />
@@ -1335,7 +1335,7 @@
                                   <!-- DPT18 -->
                                   <when test="6">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%227_R-%TT%%CC%22701" />
@@ -1343,7 +1343,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%228_R-%TT%%CC%22801" />
@@ -1353,7 +1353,7 @@
                                   <!-- DPT3007 -->
                                   <when test="7">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%231_R-%TT%%CC%23101" />
@@ -1361,7 +1361,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%232_R-%TT%%CC%23201" />
@@ -1371,7 +1371,7 @@
                                   <!-- DPT3008 -->
                                   <when test="8">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%203_R-%TT%%CC%20302">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%235_R-%TT%%CC%23501" />
@@ -1379,7 +1379,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%204_R-%TT%%CC%20401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%236_R-%TT%%CC%23601" />
@@ -1392,7 +1392,7 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="!=3">
                                     <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%292_R-%TT%%CC%29201">
                                       <when test="!=0">
                                         <ComObjectRefRef RefId="%AID%_O-%TT%%CC%105_R-%TT%%CC%10501" />
@@ -1411,7 +1411,7 @@
                         <ParameterSeparator Id="%AID%_PS-nnn" Text="Extralanger Tastendruck" UIHint="Headline" />
 
                         <!-- DPT Select -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001" HelpContext="BTN-DptSelect" />
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001" HelpContext="BTN-DptSelect" IndentLevel="1" />
                         <!-- DPT nicht deaktiviert-->
                         <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
                           <when test="!=0">
@@ -1423,13 +1423,13 @@
                             </choose>
 
                             <!-- 1. Taster -->                            
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="1. Taster"/>
+                            <ParameterSeparator Id="%AID%_PS-nnn" Text="   1. Taster"/>
                             
                             <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
                               <!-- DPT1 -->
                               <when test="1">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%305_R-%TT%%CC%30501" />
@@ -1437,7 +1437,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%306_R-%TT%%CC%30601" />
@@ -1447,7 +1447,7 @@
                               <!-- DPT2 -->
                               <when test="2">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%309_R-%TT%%CC%30901" />
@@ -1455,7 +1455,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%310_R-%TT%%CC%31001" />
@@ -1465,7 +1465,7 @@
                               <!-- DPT5 -->
                               <when test="4">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%313_R-%TT%%CC%31301" />
@@ -1473,7 +1473,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%314_R-%TT%%CC%31401" />
@@ -1483,7 +1483,7 @@
                               <!-- DPT5001 -->
                               <when test="5">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%317_R-%TT%%CC%31701" />
@@ -1491,7 +1491,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%318_R-%TT%%CC%31801" />
@@ -1501,7 +1501,7 @@
                               <!-- DPT7 -->
                               <when test="3">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%321_R-%TT%%CC%32101" />
@@ -1509,7 +1509,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%322_R-%TT%%CC%32201" />
@@ -1519,7 +1519,7 @@
                               <!-- DPT18 -->
                               <when test="6">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30101">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%325_R-%TT%%CC%32501" />
@@ -1527,7 +1527,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%326_R-%TT%%CC%32601" />
@@ -1537,7 +1537,7 @@
                               <!-- DPT3007 -->
                               <when test="7">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%329_R-%TT%%CC%32901" />
@@ -1545,7 +1545,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%330_R-%TT%%CC%33001" />
@@ -1555,7 +1555,7 @@
                               <!-- DPT3008 -->
                               <when test="8">
                                 <!-- Event Press -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%301_R-%TT%%CC%30102">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%333_R-%TT%%CC%33301" />
@@ -1563,7 +1563,7 @@
                                 </choose>
 
                                 <!-- Event Release -->
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%302_R-%TT%%CC%30201">
                                   <when test="1">
                                     <ParameterRefRef RefId="%AID%_UP-%TT%%CC%334_R-%TT%%CC%33401" />
@@ -1576,7 +1576,7 @@
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                               <when test="!=3">
                                 <!-- Additional DPT1 -->     
-                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                <ParameterRefRef RefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%391_R-%TT%%CC%39101">
                                   <when test="!=0">
                                     <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10601" />
@@ -1589,13 +1589,13 @@
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                               <when test="2">
                                 <ParameterSeparator Id="%AID%_PS-nnn" Text=" " />
-                                <ParameterSeparator Id="%AID%_PS-nnn" Text="2. Taster" />
+                                <ParameterSeparator Id="%AID%_PS-nnn" Text="   2. Taster" />
 
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%300_R-%TT%%CC%30001">
                                   <!-- DPT1 -->
                                   <when test="1">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%307_R-%TT%%CC%30701" />
@@ -1603,7 +1603,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%308_R-%TT%%CC%30801" />
@@ -1613,7 +1613,7 @@
                                   <!-- DPT2 -->
                                   <when test="2">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%311_R-%TT%%CC%31101" />
@@ -1621,7 +1621,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%312_R-%TT%%CC%31201" />
@@ -1631,7 +1631,7 @@
                                   <!-- DPT5 -->
                                   <when test="4">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%315_R-%TT%%CC%31501" />
@@ -1639,7 +1639,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%316_R-%TT%%CC%31601" />
@@ -1649,7 +1649,7 @@
                                   <!-- DPT5001 -->
                                   <when test="5">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%319_R-%TT%%CC%31901" />
@@ -1657,7 +1657,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%320_R-%TT%%CC%32001" />
@@ -1667,7 +1667,7 @@
                                   <!-- DPT7 -->
                                   <when test="3">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%323_R-%TT%%CC%32301" />
@@ -1675,7 +1675,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%324_R-%TT%%CC%32401" />
@@ -1685,7 +1685,7 @@
                                   <!-- DPT18 -->
                                   <when test="6">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30301">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%327_R-%TT%%CC%32701" />
@@ -1693,7 +1693,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%328_R-%TT%%CC%32801" />
@@ -1711,7 +1711,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%332_R-%TT%%CC%33201" />
@@ -1721,7 +1721,7 @@
                                   <!-- DPT3008 -->
                                   <when test="8">
                                     <!-- Event Press -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" HelpContext="BTN-ChannelPress" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302" HelpContext="BTN-ChannelPress" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%303_R-%TT%%CC%30302">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%335_R-%TT%%CC%33501" />
@@ -1729,7 +1729,7 @@
                                     </choose>
 
                                     <!-- Event Release -->
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401" HelpContext="BTN-ChannelRelease" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%304_R-%TT%%CC%30401">
                                       <when test="1">
                                         <ParameterRefRef RefId="%AID%_UP-%TT%%CC%336_R-%TT%%CC%33601" />
@@ -1742,7 +1742,7 @@
                                 <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                                   <when test="!=3">
                                     <!-- Additional DPT1 -->     
-                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="1" />
+                                    <ParameterRefRef RefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201" HelpContext="BTN-ChannelAdditionalOutput" IndentLevel="2" />
                                     <choose ParamRefId="%AID%_UP-%TT%%CC%392_R-%TT%%CC%39201">
                                       <when test="!=0">
                                         <ComObjectRefRef RefId="%AID%_O-%TT%%CC%106_R-%TT%%CC%10601" />
@@ -2008,13 +2008,13 @@
                         <!-- MC -->
                         <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">
                           <when test="3">
-                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%051_R-%TT%%CC%05101" HelpContext="BTN-ReactionTimeMultiClick" />
+                            <ParameterRefRef RefId="%AID%_UP-%TT%%CC%051_R-%TT%%CC%05101" IndentLevel="1" HelpContext="BTN-ReactionTimeMultiClick" />
                           </when>
                         </choose>
                         <!-- Long -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%052_R-%TT%%CC%05201" HelpContext="BTN-ReactionTimeLong" />
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%052_R-%TT%%CC%05201" IndentLevel="1" HelpContext="BTN-ReactionTimeLong" />
                         <!-- ExtraLong -->
-                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%053_R-%TT%%CC%05301" HelpContext="BTN-ReactionTimeExtraLong" />
+                        <ParameterRefRef RefId="%AID%_UP-%TT%%CC%053_R-%TT%%CC%05301" IndentLevel="1" HelpContext="BTN-ReactionTimeExtraLong" />
                       </when>
                     </choose>
 
