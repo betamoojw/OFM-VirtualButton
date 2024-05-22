@@ -96,7 +96,7 @@ private:
   bool _statusShort = false;
   bool _statusLong = false;
   bool _statusExtraLong = false;
-  u_int32_t _dynamicStatusTimer = 0;
+  uint32_t _dynamicStatusTimer = 0;
 
   VirtualButtonState _buttonState[2] = {
       VirtualButtonState(),

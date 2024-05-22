@@ -204,7 +204,6 @@ void VirtualButtonChannel::processInputKoStatus(GroupObject &ko, uint8_t statusN
         if (value == 100 && !status)
             status = true;
 
-        evaluateDynamicStatus();
     }
     else
     {
@@ -392,6 +391,7 @@ void VirtualButtonChannel::eventMultiClick(uint8_t clicks)
     logDebugP("  Button %i: MultiClick %i clicks - type %i ko %i value %i", 0, clicks, ParamBTN_bOutMulti_DPT, outputKo, params.output);
     writeOutput(ParamBTN_bOutMulti_DPT, outputKo, params.output, _statusShort);
 }
+
 void VirtualButtonChannel::eventShortPress(bool button)
 {
     if (!_buttonParams[button].outputShortPressActive)
@@ -532,27 +532,11 @@ void VirtualButtonChannel::writeOutput(uint8_t outputDpt, uint16_t outputKo, uin
             // Start Timer for Status Fallback
             _dynamicStatusTimer = (outputValue == 0 || outputValue == 8 || outputValue == 16) ? millis() : 0;
 
-            if (outputValue == 16) // 1-Taster Stop
-                outputValue = status ? 8 : 0;
-
-            if (outputValue == 17) // 1-Taster 100%
-            {
-                status = !status;
-                outputValue = status ? 9 : 1;
-            }
 
             knx.getGroupObject(BTN_KoCalcNumber(outputKo)).value((uint8_t)outputValue, DPT_DecimalFactor);
             break;
 
             // DPT3008
-            if (outputValue == 16) // 1-Taster Stop
-                outputValue = status ? 0 : 8;
-
-            if (outputValue == 17) // 1-Taster 100%
-            {
-                status = !status;
-                outputValue = status ? 1 : 9;
-            }
 
             knx.getGroupObject(BTN_KoCalcNumber(outputKo)).value((uint8_t)outputValue, DPT_DecimalFactor);
             break;

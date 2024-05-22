@@ -107,8 +107,6 @@
                   <Enumeration Text="Erhöhen, 6% (0D)"      Value="13"  Id="%ENID%" />
                   <Enumeration Text="Erhöhen, 3% (0E)"      Value="14"  Id="%ENID%" />
                   <Enumeration Text="Erhöhen, 1% (0F)"      Value="15"  Id="%ENID%" />
-                  <Enumeration Text="1-Taster, Stop"        Value="16"  Id="%ENID%" />
-                  <Enumeration Text="1-Taster, 100%"        Value="17"  Id="%ENID%" />
                 </TypeRestriction>
               </ParameterType>
 
@@ -130,8 +128,6 @@
                   <Enumeration Text="Runter, 6% (0D)"    Value="13"  Id="%ENID%" />
                   <Enumeration Text="Runter, 3% (0E)"    Value="14"  Id="%ENID%" />
                   <Enumeration Text="Runter, 1% (0F)"    Value="15"  Id="%ENID%" />
-                  <Enumeration Text="1-Taster, Stop"     Value="16"  Id="%ENID%" />
-                  <Enumeration Text="1-Taster, 100%"     Value="17"  Id="%ENID%" />
                 </TypeRestriction>
               </ParameterType>
 
