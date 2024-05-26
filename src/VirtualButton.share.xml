@@ -512,6 +512,10 @@
                 <!-- Hidden -->
                 <ParameterRefRef RefId="%AID%_P-%TT%00001_R-%TT%0000101" />
 
+                <!-- Version -->                                
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastermodul Version: %ModuleVersion%" UIHint="Headline" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+
                 <!-- Verfuegbare-Kanaele -->
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Kanalauswahl" UIHint="Headline" />
                 <ParameterRefRef RefId="%AID%_UP-%TT%00014_R-%TT%0001401" HelpContext="BASE-Verfuegbare-Kanaele" IndentLevel="1" />
@@ -524,9 +528,6 @@
                 <ParameterRefRef RefId="%AID%_UP-%TT%00012_R-%TT%0001201" IndentLevel="1" HelpContext="BTN-ReactionTimeLong" />
                 <!-- ExtraLong -->
                 <ParameterRefRef RefId="%AID%_UP-%TT%00013_R-%TT%0001301" IndentLevel="1" HelpContext="BTN-ReactionTimeExtraLong" />
-                
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="Modulversion: %ModuleVersion%" UIHint="Headline" />
               </ParameterBlock>
 
               <ParameterBlock Id="%AID%_PB-nnn" Name="Docu" Text="Dokumentation" Icon="information-outline" HelpContext="BTN-Dokumentation">
