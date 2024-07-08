@@ -20,7 +20,7 @@ Dieses Modul stellt virtuelle Taster bereit. Voraussetzung ist, dass beim Tasten
 #### Funktionen
 - Sperrmöglichkeit
 - Individuelle Reaktionszeiten
-- Unterschiedung zwischen "Drücken" und "Loslassen"
+- Unterscheidung zwischen "Drücken" und "Loslassen"
 - Es gibt einen Zusätzlichen DPT1 AUsgab bei 1/2fach-Tastern
 - Zusätzliches "Extra-Lang" neben den üblichen Einfacher und Langer Tastendruck.
 - Für DPT1.001 gibt es einen "Umschalter"
