@@ -1,4 +1,6 @@
-### Dokumentation
+﻿### Dokumentation
+
+Eine vollständige Applikationsbeschreibung ist unter folgendem Link verfügbar: https://github.com/openknx/OFM-VirtualButton/blob/v1/doc/Applikationsbeschreibung-Taster.md
 
 Dieses Modul stellt virtuelle Taster bereit. Voraussetzung ist, dass beim Tastendruck ein EIN und beim Loslassen ein AUS gesendet wird.
 
@@ -24,8 +26,9 @@ Dieses Modul stellt virtuelle Taster bereit. Voraussetzung ist, dass beim Tasten
 - Es gibt einen Zusätzlichen DPT1 AUsgab bei 1/2fach-Tastern
 - Zusätzliches "Extra-Lang" neben den üblichen Einfacher und Langer Tastendruck.
 - Für DPT1.001 gibt es einen "Umschalter"
-- Bei DPT3.007 (Dimmer) gibt es einen helligkeitsabhängigen Status, welcher nach einer Rückfallzeit anhand eines Schwellwertes die nächste Dimmerrichung vorgibt.
+- Bei DPT3.007 (Dimmer) gibt es einen helligkeitsabhängigen Status, welcher nach einer Rückfallzeit anhand eines Schwellwertes die nächste Dimmerrichtung vorgibt.
 - Für die Kombination von Mehrfach-Klick und DPT1.001 gibt es je Mehrfach-Klick ein eigens KO. In Kombination mit Logikmodul können auch spezielle Anforderungen abgebildet werden.
 - Bei Mehrfach-Klick kann auch der Klickzähler ausgegeben werden, um diese in einer externen Logik über den 3fach Klick hinaus ausgewertet zu werden.
 
 Das Repository findet man unter: https://github.com/openknx/OFM-VirtualButton
+

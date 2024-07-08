@@ -53,15 +53,18 @@ Die ETS ist auch schneller in der Anzeige, wenn sie weniger (leere) Kanäle dars
 
 Für alle Funktionen, die aus mehreren Tastendrücken bestehen, können hier die Zeiten angegeben werden, die gewartete werden soll.
 
+<!-- DOC -->
 #### **Mehrfach-Klick**
 
 Gibt die Wartezeit an, wie lange auf einen weiteren Tastendruck gewartet wird. Sobald die Zeit abgelaufen ist, wird der bis dahin gezählte Mehrfach-Klick ausgeführt.
 
+<!-- DOC -->
 #### **Langer Tastendruck**
 
 Gibt an, ab wann der gehaltene Tastendruck als "Langer Tastendruck" gewertet wird. Sobald die Zeit erreicht wurde, wird ein passendes "Press"-Event ausgelöst. Sollte nun vor dem Ablauf der Reaktionszeit für "Extra langer Tastendruck" (falls aktiviert) losgelassen werden, so wird das dazugehörige "Release"-Event ausgelöst.
 
-#### **Extra Langer Tastendruck**
+<!-- DOC -->
+#### **Extra langer Tastendruck**
 
 Gibt an, ab wann der gehaltene Tastendruck als "Extra langer Tastendruck" gewertet wird. Sobald die Zeit erreicht wurde, wird ein passendes "Press"-Event ausgelöst. Sobald nun losgelassen wird, wird das dazugehörige "Release"-Event ausgelöst.
 
@@ -69,6 +72,7 @@ Gibt an, ab wann der gehaltene Tastendruck als "Extra langer Tastendruck" gewert
 
 Da alle Taster gleichartig konfiguriert werden, wird hier nur die Konfiguration für einen Taster behandelt.
 
+<!-- DOC -->
 ### **Beschreibung**
 
 Der hier angegebene Name wird an verschiedenen Stellen verwendet, um diesen Kanal wiederzufinden.
@@ -78,6 +82,7 @@ Der hier angegebene Name wird an verschiedenen Stellen verwendet, um diesen Kana
 
 Eine aussagekräftige Benennung erlaubt eine einfachere Orientierung innerhalb der Applikation, vor allem wenn man viele Kanäle nutzt.
 
+<!-- DOC -->
 ### **Modus**
 
 Der virtuelle Taster kann in verschiedenen Tastermodi betrieben werden.
@@ -94,20 +99,24 @@ Der 2fach-Taster ist der Klassiker für normale "Ein/Aus" bzw "Hoch/Runter"-Tast
 
 In diesem Modus werden die Auslösungen des Taster innerhalb einer Zeitspanne gezählt. Dabei kann der Einfach-, Doppel- sowie der Dreifach-Klick direkt mit einem Event versehen werden. Weitere Events (wie der Vierfach- oder Fünffach-Klick) sind in Kombination mit einer Logikengine machbar.
 
+<!-- DOC -->
 ### **Sperre**
 
 Durch die Verwendung der Sperre kann der virtuelle Taster gesperrt werden.
 
+<!-- DOC -->
 ### **Tastereingänge**
 
 Um die Channels über die Tastereingänge zu triggern, müssen beim Drücken eine 1 und beim Loslassen eine 0 gesendet werden. Taster, die keine Unterscheidung zwischen diesen beiden Zuständen ermöglichen, sind nicht verwendbar.
 
 Standardmäßig kommen die Events über ein externes KO. Manche verwendete Hardware hat bereits Binäreingänge bzw. Taster verbaut. In diesem Fall kann der Eingang auch ohne Umwege über den Bus zugewiesen werden. Beachte, dass diese internen Tastereingängen in der Regel konfigurationsabhängig sind. Es ist daher meistens nötig, im jeweiligen Modul (je nach Hardware) den Tastereingang erst zu aktivieren bzw. zu konfigurieren.
 
+<!-- DOC -->
 ### **Datentyp**
 
 Es muss ein Datentyp ausgewählt werden, mit dem der Taster seine Schaltaktionen sendet. Der Datentyp kann für den "Einfachen Tastendruck", den "Langen Tastendruck" und den "Extralangen Tastendruck" unterschiedlich sein.
 
+<!-- DOC -->
 ### **Wert beim Drücken**
 
 Der ausgewählte Wert wird beim Drücken sofort bzw. beim gedrückt halten (beim langem oder extra langen Tastendruck) nach Ablauf der eingestellten Reaktionszeit auf den Bus gesendet.
@@ -123,10 +132,13 @@ Beim "Langer Tastendruck" sollte mittels "Wert beim Drücken" ein AUS geschickt 
 In dieser Kombination ist sichergestellt, dass das EIN nur beim Loslassen und innerhalb der Reaktionszeit gesendet wird.
 Das AUS hingegen wird sofort bei erreichen der eingestellten Reaktionszeit ausgelöst, so dass der Benutzer sieht das er loslassen kann.
 
+<!-- DOC -->
 ### **Wert beim Loslassen**
 
 Der ausgewählte Wert wird bei Loslassen gesendet. Vorherige Events werden dabei nicht ausgelöst. Habe ich also für "Einfacher Tastendruck" und "Langer Tastendruck" ein Wert eingestellt und halte die Taste entsprechend lange gedrückt und lasse dann los, so wird nur der Wert von "Langer Tastendruck" gesendet. Möchte man das beide Events ausgelöst werden, so muss man die beiden Funktionen auf zwei virtuelle Taster aufteilen.
 
+<!-- DOC -->
 ### **Zusatzausgang**
 
 Mit dem Zusatzausgang besteht die Möglichkeit, ein zusätzliches Telegramm zu senden. Dieses Telegramm ist auf das DPT1 beschränkt und wird beim Loslassen gesendet.
+
