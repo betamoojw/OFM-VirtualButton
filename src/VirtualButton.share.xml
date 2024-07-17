@@ -532,7 +532,7 @@
               </ParameterType>
             </ParameterTypes>
             <Parameters>
-              <Parameter Id="%AID%_P-%TT%00001" Name="SelectHelper"          ParameterType="%AID%_PT-ValueDpt5"         Text=""        Value="0" Access="None" />
+              <Parameter Id="%AID%_P-%TT%00002" Name="SelectHelper"          ParameterType="%AID%_PT-ValueDpt5"         Text=""        Value="0" Access="None" />
 
               <Union SizeInBit="32">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
@@ -543,7 +543,7 @@
               </Union>
             </Parameters>
             <ParameterRefs>
-              <ParameterRef Id="%AID%_P-%TT%00001_R-%TT%0000101" RefId="%AID%_P-%TT%00001" />
+              <ParameterRef Id="%AID%_P-%TT%00002_R-%TT%0000201" RefId="%AID%_P-%TT%00002" />
               <ParameterRef Id="%AID%_UP-%TT%00011_R-%TT%0001101" RefId="%AID%_UP-%TT%00011" />
               <ParameterRef Id="%AID%_UP-%TT%00012_R-%TT%0001201" RefId="%AID%_UP-%TT%00012" />
               <ParameterRef Id="%AID%_UP-%TT%00013_R-%TT%0001301" RefId="%AID%_UP-%TT%00013" />
@@ -558,7 +558,7 @@
             <Channel Id="%AID%_CH-%PREFIX%" Number="%PREFIX%" Name="Main" Text="Virtuelle Taster" HelpContext="BTN-Dokumentation" Icon="button-pointer">
               <ParameterBlock Id="%AID%_PB-nnn" Name="Basic" Text="Allgemein" Icon="cog-outline" HelpContext="BTN-Dokumentation">
                 <!-- Hidden -->
-                <ParameterRefRef RefId="%AID%_P-%TT%00001_R-%TT%0000101" />
+                <ParameterRefRef RefId="%AID%_P-%TT%00002_R-%TT%0000201" />
 
                 <!-- Version -->                                
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastermodul" UIHint="Headline" />

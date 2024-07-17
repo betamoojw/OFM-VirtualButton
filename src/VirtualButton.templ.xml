@@ -500,7 +500,7 @@
 
                         <!-- Taserteingang -->
                         <!-- Verstecke Eingänge wenn es keine Binäreingänge gibt -->
-                        <choose ParamRefId="%AID%_P-%TT%00001_R-%TT%0000101"><!-- Static 0 -->
+                        <choose ParamRefId="%AID%_P-%TT%00002_R-%TT%0000201"><!-- Static 0 -->
                           <when test="!=%BTN_HideInputSelector%"> <!-- default -->
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastereingänge" UIHint="Headline" />
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
