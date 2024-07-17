@@ -2,6 +2,7 @@
 <?xml-model href="../../Organization/knxprod-support/knx_project_14/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <KNX xmlns:op="http://github.com/OpenKNX/OpenKNXproducer" xmlns="http://knx.org/xml/project/14" CreatedBy="KNX MT" ToolVersion="5.1.255.16695">
   <op:config name="%BTN_NumChannelsDefault%" value="%N%" />
+  <op:config name="%BTN_HideInputSelector%" value="0" />
   <ManufacturerData>
     <Manufacturer>
       <ApplicationPrograms>
@@ -531,7 +532,8 @@
               </ParameterType>
             </ParameterTypes>
             <Parameters>
-              <Parameter Id="%AID%_P-%TT%00001" Name="HideInputs" ParameterType="%AID%_PT-CheckBox" Text="Hide Inputs" Value="0" Access="None" />
+              <Parameter Id="%AID%_P-%TT%00001" Name="SelectHelper"          ParameterType="%AID%_PT-ValueDpt5"         Text=""        Value="0" Access="None" />
+
               <Union SizeInBit="32">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%TT%00011" Name="ReactionTimeMultiClick" Offset="0" BitOffset="0" ParameterType="%AID%_PT-BTNReactionTime" Text="Mehrfach-Klick" Value="4" />
