@@ -87,7 +87,18 @@ void VirtualButtonChannel::setup()
         _params.reactionTimeExtraLong = ParamBTN_ReactionTimeExtraLong * 100;
 
     // Debug
-    // logInfoP("reactionTimeMultiClick: %i", _params.reactionTimeMultiClick);
+    // logInfoP("_buttonParams[0].inputKo: %i", _buttonParams[0].inputKo);
+    // logInfoP("_buttonParams[1].inputKo: %i", _buttonParams[1].inputKo);
+    // logInfoP("_buttonParams[0].outputShortPressActive: %i", _buttonParams[0].outputShortPressActive);
+    // logInfoP("_buttonParams[0].outputShortReleaseActive: %i", _buttonParams[0].outputShortReleaseActive);
+    // logInfoP("_buttonParams[0].outputLongPressActive: %i", _buttonParams[0].outputLongPressActive);
+    // logInfoP("_buttonParams[0].outputLongReleaseActive: %i", _buttonParams[0].outputLongReleaseActive);
+    // logInfoP("_buttonParams[0].outputShortRelease: %i", _buttonParams[0].outputShortRelease);
+    // logInfoP("_buttonParams[0].outputLongPress: %i", _buttonParams[0].outputLongPress);
+    // logInfoP("_buttonParams[0].outputLongRelease: %i", _buttonParams[0].outputLongRelease);
+    // logInfoP("ParamBTN_bStatusFallbackTime: %i", ParamBTN_bStatusFallbackTime * 1000);
+    // logInfoP("ParamBTN_bStatusThresholdHigh: %i", ParamBTN_bStatusThresholdHigh);
+    // logInfoP("ParamBTN_bStatusThresholdLow: %i", ParamBTN_bStatusThresholdLow);
 }
 
 void VirtualButtonChannel::loop()
@@ -99,55 +110,43 @@ void VirtualButtonChannel::loop()
 }
 void VirtualButtonChannel::processDynamicStatusTimer()
 {
-    // Es ist überhaupt kein dynamischer Status aktiv
-    if (ParamBTN_bStatusFallbackTimeMS == 0)
+    if (!ParamBTN_bDynamicStatus)
         return;
 
-    if (_dynamicStatusTimer > 0 && delayCheck(_dynamicStatusTimer, ParamBTN_bStatusFallbackTimeMS))
+    // Timer muss aktiv sein
+    if (_dynamicStatusTimer && delayCheck(_dynamicStatusTimer, ParamBTN_bStatusFallbackTime * 1000))
     {
+        logTraceP("processDynamicStatusTimer");
+        logIndentUp();
         _dynamicStatusTimer = 0;
         evaluateDynamicStatus();
+        logIndentDown();
     }
 }
 
-/*
-  Nach jedem Tastendruck (3007/3008) wird ein Timer gestartet.
-  Läuft dieser ab (processDynamicStatusTimer) wird der interne Status neu evaluiert.
-  Ist keine Timer gestartet, so wird immer neu evaluiert (processInputKoStatus)
-*/
 void VirtualButtonChannel::evaluateDynamicStatus()
 {
-    // Läuft gerade ein Timer, so ist keine Änderung erlaubt.
-    if (_dynamicStatusTimer > 0)
+    // und nur wenn nicht gerade gedimmt wird
+    if (_buttonState[0].pressLong)
         return;
 
-    // Es ist überhaupt kein dynamischer Status aktiv
-    if (ParamBTN_bStatusFallbackTimeMS == 0)
-        return;
+    uint8_t value = KoBTN_Out2Status.value(DPT_Scaling);
+    logTraceP("evaluateDynamicStatus: %i", value);
+    logIndentUp();
 
-    logTraceP("evaluateDynamicStatus");
+    if (value >= ParamBTN_bStatusThresholdHigh && !_statusLong)
+    {
+        logTraceP("evaluateDynamicStatus %i >= %i (true)", value, ParamBTN_bStatusThresholdHigh);
+        _statusLong = true;
+    }
 
-    // Short
-    if (ParamBTN_bOutShort_DPT == 7 || ParamBTN_bOutShort_DPT == 8)
+    else if (value <= ParamBTN_bStatusThresholdLow && _statusLong)
     {
-        uint8_t value = KoBTN_Out1Status.value(DPT_Scaling);
-        _statusShort = (value < ParamBTN_bStatusThreshold) ? false : true;
-        logTraceP("  short: %i/%i/%i", value, ParamBTN_bStatusThreshold, _statusShort);
+        logTraceP("evaluateDynamicStatus %i <= %i (false)", value, ParamBTN_bStatusThresholdLow);
+        _statusLong = false;
     }
-    // Long
-    if (ParamBTN_bOutLong_DPT == 7 || ParamBTN_bOutLong_DPT == 8)
-    {
-        uint8_t value = KoBTN_Out2Status.value(DPT_Scaling);
-        _statusLong = (value < ParamBTN_bStatusThreshold) ? false : true;
-        logTraceP("  long: %i/%i/%i", value, ParamBTN_bStatusThreshold, _statusLong);
-    }
-    // ExtraLong
-    if (ParamBTN_bOutExtraLong_DPT == 7 || ParamBTN_bOutExtraLong_DPT == 8)
-    {
-        uint8_t value = KoBTN_Out3Status.value(DPT_Scaling);
-        _statusExtraLong = (value < ParamBTN_bStatusThreshold) ? false : true;
-        logTraceP("  extralong: %i/%i/%i", value, ParamBTN_bStatusThreshold, _statusExtraLong);
-    }
+
+    logIndentDown();
 }
 
 void VirtualButtonChannel::processInputKo(GroupObject &ko)
@@ -194,16 +193,56 @@ void VirtualButtonChannel::processInputKo(GroupObject &ko)
 
 void VirtualButtonChannel::processInputKoStatus(GroupObject &ko, uint8_t statusNumber, uint8_t dpt, bool &status)
 {
-    logTraceP("processInputKoStatus %i/%i/%i", statusNumber, dpt, status);
+    // logTraceP("processInputKoStatus %i/%i/%i", statusNumber, dpt, status);
 
-    if (dpt == 7 || dpt == 8)
+    if (dpt == 7 || dpt == 8) // 3.000x (long only)
     {
-        uint8_t value = ko.value(DPT_Scaling);
-        if (value == 0 && status)
-            status = false;
-        if (value == 100 && !status)
-            status = true;
+        // nur wenn nicht gerade gedimmt wird
+        if (_buttonState[0].pressLong)
+            return;
 
+        uint8_t value = ko.value(DPT_Scaling);
+
+        /*
+         * Sonderfall
+         * Es wird noch ein weiterer Status gespeichert, damit bei Änderung des Status AN/AUS zusätzlich eine Umkehr gemacht werden kann.
+         * Bedeutet: Schalte ich aus (nächster fahrt geht hoch) und jemand schaltet woanders auf 80%, dann soll dieser Taster auch runter fahren.
+         */
+
+        if (!_statusLongLast && value > 0)
+        {
+            _statusLong = true;
+            _statusLongLast = true;
+        }
+        if (_statusLongLast && value == 0)
+        {
+            _statusLong = false;
+            _statusLongLast = false;
+        }
+
+        if (value == 100 && !_statusLong)
+        {
+            _statusLong = true;
+            return;
+        }
+
+        else if (value == 0 && _statusLong)
+        {
+            _statusLong = false;
+            return;
+        }
+
+        // Sonderlocke 1-Tasten Dimmen
+        if (_buttonParams[0].outputLongPress == 17)
+        {
+            // und wenn kein timer läuft
+            if (_dynamicStatusTimer)
+                return;
+
+            // wird der dynamic status genutzt dann muss
+            if (ParamBTN_bDynamicStatus)
+                evaluateDynamicStatus();
+        }
     }
     else
     {
@@ -529,14 +568,22 @@ void VirtualButtonChannel::writeOutput(uint8_t outputDpt, uint16_t outputKo, uin
             break;
 
         case BTN_DPT3007:
-            // Start Timer for Status Fallback
-            _dynamicStatusTimer = (outputValue == 0 || outputValue == 8 || outputValue == 16) ? millis() : 0;
-
-
-            knx.getGroupObject(BTN_KoCalcNumber(outputKo)).value((uint8_t)outputValue, DPT_DecimalFactor);
-            break;
-
-            // DPT3008
+        case BTN_DPT3008:
+            _dynamicStatusTimer = 0;
+            if (outputValue == 16) // 1-Taster Stop
+            {
+                outputValue = status ? 8 : 0;
+                if (ParamBTN_bDynamicStatus)
+                {
+                    logTraceP("Start dynamic status timer");
+                    _dynamicStatusTimer = millis();
+                }
+            }
+            else if (outputValue == 17) // 1-Taster 100%
+            {
+                status = !status;
+                outputValue = status ? 9 : 1;
+            }
 
             knx.getGroupObject(BTN_KoCalcNumber(outputKo)).value((uint8_t)outputValue, DPT_DecimalFactor);
             break;

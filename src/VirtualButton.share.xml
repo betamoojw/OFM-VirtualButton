@@ -13,7 +13,7 @@
               </ParameterType>
 
               <ParameterType Id="%AID%_PT-BTNMode" Name="BTNMode">
-                <TypeRestriction Base="Value" SizeInBit="4">
+                <TypeRestriction Base="Value" SizeInBit="7">
                   <Enumeration Text="Deaktviert" Value="0" Id="%ENID%" />
                   <Enumeration Text="1fach-Taster" Value="1" Id="%ENID%" />
                   <Enumeration Text="2fach-Taster" Value="2" Id="%ENID%" />
@@ -34,8 +34,6 @@
                   <Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
                   <Enumeration Text="DPT 1.001 Schalten" Value="1" Id="%ENID%" />
                   <Enumeration Text="DPT 2.001 Zwangsführung" Value="2" Id="%ENID%" />
-                  <Enumeration Text="DPT 3.007 Dimmen" Value="7" Id="%ENID%" />
-                  <Enumeration Text="DPT 3.008 Jalousie" Value="8" Id="%ENID%" />
                   <Enumeration Text="DPT 5.005 (0..255)" Value="4" Id="%ENID%" />
                   <Enumeration Text="DPT 5.001 (0..100%)" Value="5" Id="%ENID%" />
                   <Enumeration Text="DPT 7.001 (0..65535)" Value="3" Id="%ENID%" />
@@ -43,11 +41,13 @@
                 </TypeRestriction>
               </ParameterType>
 
-              <ParameterType Id="%AID%_PT-BTNOutputMulti" Name="BTNOutputMulti">
+              <ParameterType Id="%AID%_PT-BTNOutputDim" Name="BTNOutputDim">
                 <TypeRestriction Base="Value" SizeInBit="8">
                   <Enumeration Text="Deaktiviert" Value="0" Id="%ENID%" />
                   <Enumeration Text="DPT 1.001 Schalten" Value="1" Id="%ENID%" />
                   <Enumeration Text="DPT 2.001 Zwangsführung" Value="2" Id="%ENID%" />
+                  <Enumeration Text="DPT 3.007 Dimmen" Value="7" Id="%ENID%" />
+                  <Enumeration Text="DPT 3.008 Jalousie" Value="8" Id="%ENID%" />
                   <Enumeration Text="DPT 5.005 (0..255)" Value="4" Id="%ENID%" />
                   <Enumeration Text="DPT 5.001 (0..100%)" Value="5" Id="%ENID%" />
                   <Enumeration Text="DPT 7.001 (0..65535)" Value="3" Id="%ENID%" />
@@ -89,9 +89,14 @@
                 </TypeRestriction>
               </ParameterType>
 
+              <ParameterType Id="%AID%_PT-BTNOutputDpt3Stop" Name="BTNOutputDpt3Stop">
+                <TypeRestriction Base="Value" SizeInBit="16">
+                  <Enumeration Text="Stop" Value="16" Id="%ENID%" />
+                </TypeRestriction>
+              </ParameterType>
+
               <ParameterType Id="%AID%_PT-BTNOutputDpt3007" Name="BTNOutputDpt3007">
                 <TypeRestriction Base="Value" SizeInBit="16">
-                  <Enumeration Text="Verringern, Stop (00)" Value="0"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 100% (01)" Value="1"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 50% (02)"  Value="2"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 25% (03)"  Value="3"   Id="%ENID%" />
@@ -99,7 +104,6 @@
                   <Enumeration Text="Verringern, 6% (05)"   Value="5"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 3% (06)"   Value="6"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 1% (07)"   Value="7"   Id="%ENID%" />
-                  <Enumeration Text="Erhöhen, Stop (08)"    Value="8"   Id="%ENID%" />
                   <Enumeration Text="Erhöhen, 100% (09)"    Value="9"   Id="%ENID%" />
                   <Enumeration Text="Erhöhen, 50% (0A)"     Value="10"  Id="%ENID%" />
                   <Enumeration Text="Erhöhen, 25% (0B)"     Value="11"  Id="%ENID%" />
@@ -112,7 +116,6 @@
 
               <ParameterType Id="%AID%_PT-BTNOutputDpt3008" Name="BTNOutputDpt3008">
                 <TypeRestriction Base="Value" SizeInBit="16">
-                  <Enumeration Text="Hoch, Stop (00)"    Value="0"   Id="%ENID%" />
                   <Enumeration Text="Hoch, 100% (01)"    Value="1"   Id="%ENID%" />
                   <Enumeration Text="Hoch, 50% (02)"     Value="2"   Id="%ENID%" />
                   <Enumeration Text="Hoch, 25% (03)"     Value="3"   Id="%ENID%" />
@@ -120,7 +123,46 @@
                   <Enumeration Text="Hoch, 6% (05)"      Value="5"   Id="%ENID%" />
                   <Enumeration Text="Hoch, 3% (06)"      Value="6"   Id="%ENID%" />
                   <Enumeration Text="Hoch, 1% (07)"      Value="7"   Id="%ENID%" />
-                  <Enumeration Text="Runter, Stop (08)"  Value="8"   Id="%ENID%" />
+                  <Enumeration Text="Runter, 100% (09)"  Value="9"   Id="%ENID%" />
+                  <Enumeration Text="Runter, 50% (0A)"   Value="10"  Id="%ENID%" />
+                  <Enumeration Text="Runter, 25% (0B)"   Value="11"  Id="%ENID%" />
+                  <Enumeration Text="Runter, 12% (0C)"   Value="12"  Id="%ENID%" />
+                  <Enumeration Text="Runter, 6% (0D)"    Value="13"  Id="%ENID%" />
+                  <Enumeration Text="Runter, 3% (0E)"    Value="14"  Id="%ENID%" />
+                  <Enumeration Text="Runter, 1% (0F)"    Value="15"  Id="%ENID%" />
+                </TypeRestriction>
+              </ParameterType>
+
+              <ParameterType Id="%AID%_PT-BTNOutputDpt3007Single" Name="BTNOutputDpt3007Single">
+                <TypeRestriction Base="Value" SizeInBit="16">
+                  <Enumeration Text="1-Tasten Dimmmen"      Value="17"  Id="%ENID%" />
+                  <Enumeration Text="Verringern, 100% (01)" Value="1"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 50% (02)"  Value="2"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 25% (03)"  Value="3"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 12% (04)"  Value="4"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 6% (05)"   Value="5"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 3% (06)"   Value="6"   Id="%ENID%" />
+                  <Enumeration Text="Verringern, 1% (07)"   Value="7"   Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 100% (09)"    Value="9"   Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 50% (0A)"     Value="10"  Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 25% (0B)"     Value="11"  Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 12% (0C)"     Value="12"  Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 6% (0D)"      Value="13"  Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 3% (0E)"      Value="14"  Id="%ENID%" />
+                  <Enumeration Text="Erhöhen, 1% (0F)"      Value="15"  Id="%ENID%" />
+                </TypeRestriction>
+              </ParameterType>
+
+              <ParameterType Id="%AID%_PT-BTNOutputDpt3008Single" Name="BTNOutputDpt3008Single">
+                <TypeRestriction Base="Value" SizeInBit="16">
+                  <Enumeration Text="1-Tasten Bedienung" Value="17"  Id="%ENID%" />
+                  <Enumeration Text="Hoch, 100% (01)"    Value="1"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 50% (02)"     Value="2"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 25% (03)"     Value="3"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 12% (04)"     Value="4"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 6% (05)"      Value="5"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 3% (06)"      Value="6"   Id="%ENID%" />
+                  <Enumeration Text="Hoch, 1% (07)"      Value="7"   Id="%ENID%" />
                   <Enumeration Text="Runter, 100% (09)"  Value="9"   Id="%ENID%" />
                   <Enumeration Text="Runter, 50% (0A)"   Value="10"  Id="%ENID%" />
                   <Enumeration Text="Runter, 25% (0B)"   Value="11"  Id="%ENID%" />
@@ -133,6 +175,10 @@
 
               <ParameterType Id="%AID%_PT-BTNOutputDpt5" Name="BTNOutputDpt5">
                 <TypeNumber SizeInBit="16" Type="unsignedInt" minInclusive="0" maxInclusive="255" />
+              </ParameterType>
+
+              <ParameterType Id="%AID%_PT-StatusFallbackTime" Name="StatusFallbackTime">
+                <TypeNumber SizeInBit="16" Type="unsignedInt" minInclusive="5" maxInclusive="65535" />
               </ParameterType>
 
               <ParameterType Id="%AID%_PT-BTNOutputDpt5001" Name="BTNOutputDpt5001">
@@ -520,7 +566,6 @@
                 <!-- Verfuegbare-Kanaele -->
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Kanalauswahl" UIHint="Headline" />
                 <ParameterRefRef RefId="%AID%_UP-%TT%00014_R-%TT%0001401" HelpContext="BASE-Verfuegbare-Kanaele" IndentLevel="1" />
-                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
 
                 <ParameterSeparator Id="%AID%_PS-nnn" Text="Reaktionszeiten" UIHint="Headline" />
                 <!-- MC -->

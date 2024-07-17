@@ -7,10 +7,13 @@ DOCCONTENT -->
 
 Dieses Modul stellt virtuelle Taster bereit. Voraussetzung ist, dass beim Tastendruck ein EIN und beim Loslassen ein AUS gesendet wird.
 
+Das Repository findet man unter: https://github.com/openknx/OFM-VirtualButton
+
 #### **Modus**
 - 1fach-Taster
 - 2fach-Taster
 - Mehrfach-Klick
+- 1-Tasten Dimmen
 
 #### **DPTs**
 - DPT 1.001 Schalten
@@ -26,14 +29,12 @@ Dieses Modul stellt virtuelle Taster bereit. Voraussetzung ist, dass beim Tasten
 - Sperrmöglichkeit
 - Individuelle Reaktionszeiten
 - Unterscheidung zwischen "Drücken" und "Loslassen"
-- Es gibt einen Zusätzlichen DPT1 AUsgab bei 1/2fach-Tastern
-- Zusätzliches "Extra-Lang" neben den üblichen Einfacher und Langer Tastendruck.
-- Für DPT1.001 gibt es einen "Umschalter"
-- Bei DPT3.007 (Dimmer) gibt es einen helligkeitsabhängigen Status, welcher nach einer Rückfallzeit anhand eines Schwellwertes die nächste Dimmerrichtung vorgibt.
-- Für die Kombination von Mehrfach-Klick und DPT1.001 gibt es je Mehrfach-Klick ein eigens KO. In Kombination mit Logikmodul können auch spezielle Anforderungen abgebildet werden.
-- Bei Mehrfach-Klick kann auch der Klickzähler ausgegeben werden, um diese in einer externen Logik über den 3fach Klick hinaus ausgewertet zu werden.
-
-Das Repository findet man unter: https://github.com/openknx/OFM-VirtualButton
+- Zusätzlicher DPT1-Ausgang bei 1/2-fach-Tastern
+- Zusätzliches "Extra-Lang" neben einfachem und langem Tastendruck
+- Umschalter für DPT1, DPT2
+- Dynamische Richtung für DPT5 (Dimmen/Rollladen)
+- Spezielle Kommunikationsobjekte für Mehrfach-Klick und DPT1 (Alle 3 Mehrfach-Klicks haben ein eigenes KO)
+- Klickzähler bei Mehrfach-Klick, um externe Logiken über den 3-fach Klick hinaus zu ermöglichen
 
 ## **Allgemein**
 
@@ -99,6 +100,10 @@ Der 2fach-Taster ist der Klassiker für normale "Ein/Aus" bzw "Hoch/Runter"-Tast
 
 In diesem Modus werden die Auslösungen des Taster innerhalb einer Zeitspanne gezählt. Dabei kann der Einfach-, Doppel- sowie der Dreifach-Klick direkt mit einem Event versehen werden. Weitere Events (wie der Vierfach- oder Fünffach-Klick) sind in Kombination mit einer Logikengine machbar.
 
+#### **1-Tasten Dimmen** 
+
+Dieser spezielle Modus ermöglicht das Dimmen mit nur einer Taste. Dabei wird intern die nächste Dimmrichtung gespeichert. Standardmäßig wird dieser Wert nur bei einer Statusänderung (An/Aus) überschrieben. Über die dynamische Statusauswertung kann dieser Status abhängig von der Helligkeit gesteuert werden.
+
 <!-- DOC -->
 ### **Sperre**
 
@@ -141,4 +146,22 @@ Der ausgewählte Wert wird bei Loslassen gesendet. Vorherige Events werden dabei
 ### **Zusatzausgang**
 
 Mit dem Zusatzausgang besteht die Möglichkeit, ein zusätzliches Telegramm zu senden. Dieses Telegramm ist auf das DPT1 beschränkt und wird beim Loslassen gesendet.
+
+<!-- DOC -->
+### **Dynamische Richtung**
+
+Durch die Erweiterung "Dynamische Richtung" wird es möglich, basierend auf dem %-Status, dynamisch die nächste Dimm-/Fahrtrichtung festzulegen. Verzögerung und Schwellwerte können dabei individuell festgelegt werden. Diese Funktion steht nur bei DPT3.00x zur Verfügung.
+
+Hier ein Beispiel: Ich dimme von 100 % auf 90 % herunter. Die nächste Richtung wäre jetzt wieder hochdimmen. Ein späterer Benutzer möchte jedoch aufgrund der 90 % herunterdimmen, würde aber stattdessen hochdimmen. Mit dieser Erweiterung wird der Status nach Ablauf der Verzögerung und anhand der Schwellwerte neu gesetzt.
+
+<!-- DOC HelpContext="DimVerzoegerung" -->
+#### **Verzögerung**
+
+Legt fest, wie lange die Statusauswertung nach einem Dimm-/Fahrvorgang verzögert wird. Erst nach Ablauf dieser Verzögerung wird die Dimm-/Fahrtrichtung anhand des aktuellen %-Status neu bestimmt. Der Mindestwert und auch die Empfehlung beträgt 5 Sekunden, sodass die Bedienung sicher abgeschlossen ist und der finale Aktorstatus eingetroffen ist.
+
+
+<!-- DOC HelpContext="DimSchwellwerte" -->
+#### **Schwellwerte**
+
+Der obere Schwellwert legt die Dimm-/Fahrtrichtung nach unten fest, während der untere Schwellwert die Richtung nach oben bestimmt. Greift keiner der Schwellwerte, findet keine Anpassung statt. Überlappen sich die Schwellwerte, hat der obere Schwellwert Vorrang.
 
