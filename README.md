@@ -1,6 +1,6 @@
 # OFM-VirtualButton
 
-Dies ist eine Library für virtuelle Taster zur Verwendung mit Binäreingängen oder weiteren Tastern mit weniger Funktionen. Voraussetzung ist, dass beim Tastendruck ein EIN und beim Loslassen ein AUS gesendet wird.
+Dies ist ein OpenKNX-Modul, um virtuelle Taster bereitzustellen. Diese können mit integrierten Binäreingängen (falls vorhanden) kombiniert oder mit externen Tastern verwendet werden, deren Funktionen nicht ausreichend sind. Voraussetzung für die Verwendung ist, dass der verwendete Taster oder Binäreingang bei einem Tastendruck ein EIN und beim Loslassen ein AUS senden kann.
 
 Modus
 - 1fach-Taster
@@ -20,12 +20,12 @@ DPTs
 Funktionen
 - Sperrmöglichkeit
 - Individuelle Reaktionszeiten
-- Unterschiedung zwischen "Drücken" und "Loslassen"
-- Es gibt einen Zusätzlichen DPT1 AUsgab bei 1/2fach-Tastern
-- Zusätzliches "Extra-Lang" neben den üblichen Einfacher und Langer Tastendruck.
-- Für DPT1.001 gibt es einen "Umschalter"
-- Bei DPT3.007 (Dimmer) gibt es einen helligkeitsabhängigen Status, welcher nach einer Rückfallzeit anhand eines Schwellwertes die nächste Dimmerrichung vorgibt.
-- Für die Kombination von Mehrfach-Klick und DPT1.001 gibt es je Mehrfach-Klick ein eigens KO. In Kombination mit Logikmodul können auch spezielle Anforderungen abgebildet werden.
-- Bei Mehrfach-Klick kann auch der Klickzähler ausgegeben werden, um diese in einer externen Logik über den 3fach Klick hinaus ausgewertet zu werden. 
+- Unterscheidung zwischen "Drücken" und "Loslassen"
+- Zusätzlicher DPT1-Ausgang bei 1/2-fach-Tastern
+- Zusätzliches "Extra-Lang" neben einfachem und langem Tastendruck
+- Umschalter für DPT1, DPT2
+- Dynamische Richtung für DPT3 (Dimmen/Rollladen)
+- Spezielle Kommunikationsobjekte für Mehrfach-Klick und DPT1 (Alle 3 Mehrfach-Klicks haben ein eigenes KO)
+- Klickzähler bei Mehrfach-Klick, um externe Logiken über den 3-fach Klick hinaus zu ermöglichen
 
 
