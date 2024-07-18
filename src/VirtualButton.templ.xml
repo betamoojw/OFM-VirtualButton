@@ -501,7 +501,7 @@
                         <!-- Taserteingang -->
                         <!-- Verstecke Eingänge wenn es keine Binäreingänge gibt -->
                         <choose ParamRefId="%AID%_P-%TT%00002_R-%TT%0000201"><!-- Static 0 -->
-                          <when test="!=%BTN_HideInputSelector%"> <!-- default -->
+                          <when test="!=%BTN_ShowInputSelector%"> <!-- default -->
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Tastereingänge" UIHint="Headline" />
                             <choose ParamRefId="%AID%_UP-%TT%%CC%001_R-%TT%%CC%00101">                         
                               <when test="1 3 4">
@@ -517,7 +517,7 @@
                             </choose>
                             <ParameterSeparator Id="%AID%_PS-nnn" Text="Beachte, dass interne Tastereingänge in der Regel konfigurationsabhängig sind. Es ist daher meistens nötig, im jeweiligen Modul (je nach Hardware) den Tastereingang erst zu aktivieren bzw. zu konfigurieren." UIHint="Information" />
                           </when>
-                          <when test="1">
+                          <when test="%BTN_ShowInputSelector%">
                             <!-- Init Params mit Access=None, damit KOs angezeigt werden. -->
                             <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%091_R-%TT%%CC%09109" Value="0" />
                             <Assign TargetParamRefRef="%AID%_UP-%TT%%CC%092_R-%TT%%CC%09209" Value="0" />
