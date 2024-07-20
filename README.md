@@ -1,6 +1,6 @@
 # OFM-VirtualButton
 
-Dies ist ein OpenKNX-Modul, um virtuelle Taster bereitzustellen. Diese können mit integrierten Binäreingängen (falls vorhanden) kombiniert oder mit externen Tastern verwendet werden, deren Funktionen nicht ausreichend sind. Voraussetzung für die Verwendung ist, dass der verwendete Taster oder Binäreingang bei einem Tastendruck ein EIN und beim Loslassen ein AUS senden kann.
+Dies ist ein OpenKNX-Modul, um virtuelle Taster bereitzustellen. Diese können mit integrierten Binäreingängen (falls vorhanden) oder mit externen Tastern verwendet werden. Dies kann beispielsweise sinnvoll sein, wenn die Funktionen des vorhandenen Tasters nicht ausreichend sind. Voraussetzung für die Verwendung ist, dass der verwendete Taster oder Binäreingang bei einem Tastendruck ein EIN und beim Loslassen ein AUS senden kann.
 
 Modus
 - 1fach-Taster

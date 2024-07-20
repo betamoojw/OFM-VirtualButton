@@ -5,7 +5,7 @@
 Eine vollständige Applikationsbeschreibung ist unter folgendem Link verfügbar: https://github.com/openknx/OFM-VirtualButton/blob/v1/doc/Applikationsbeschreibung-Taster.md
 DOCCONTENT -->
 
-Dies ist ein OpenKNX-Modul, um virtuelle Taster bereitzustellen. Diese können mit integrierten Binäreingängen (falls vorhanden) kombiniert oder mit externen Tastern verwendet werden, deren Funktionen nicht ausreichend sind. Voraussetzung für die Verwendung ist, dass der verwendete Taster oder Binäreingang bei einem Tastendruck ein EIN und beim Loslassen ein AUS senden kann.
+Dies ist ein OpenKNX-Modul, um virtuelle Taster bereitzustellen. Diese können mit integrierten Binäreingängen (falls vorhanden) oder mit externen Tastern verwendet werden. Dies kann beispielsweise sinnvoll sein, wenn die Funktionen des vorhandenen Tasters nicht ausreichend sind. Voraussetzung für die Verwendung ist, dass der verwendete Taster oder Binäreingang bei einem Tastendruck ein EIN und beim Loslassen ein AUS senden kann.
 
 Das Repository findet man unter: https://github.com/openknx/OFM-VirtualButton
 
@@ -156,11 +156,15 @@ Hier ein Beispiel: Ich dimme von 100 % auf 90 % herunter. Die nächste Richtung 
 <!-- DOC HelpContext="DimVerzoegerung" -->
 #### **Verzögerung**
 
-Legt fest, wie lange die Statusauswertung nach einem Dimm-/Fahrvorgang verzögert wird. Erst nach Ablauf dieser Verzögerung wird die Dimm-/Fahrtrichtung anhand des aktuellen %-Status neu bestimmt. Der Mindestwert und auch die Empfehlung beträgt 5 Sekunden, sodass die Bedienung sicher abgeschlossen ist und der finale Aktorstatus eingetroffen ist.
+Legt fest, wie lange die Statusauswertung nach einem Dimm-/Fahrvorgang verzögert wird. Erst nach Ablauf dieser Verzögerung wird die Dimm-/Fahrtrichtung anhand des aktuellen %-Status neu bestimmt. Der Mindestwert und auch die Empfehlung beträgt 5 Sekunden, sodass die Bedienung sicher abgeschlossen ist und der finale Aktorstatus eingetroffen ist. Sobald die Verzögerung abgelaufen ist, werden eintreffende Status-Updates direkt ausgewertet.
 
 
 <!-- DOC HelpContext="DimSchwellwerte" -->
 #### **Schwellwerte**
 
 Der obere Schwellwert legt die Dimm-/Fahrtrichtung nach unten fest, während der untere Schwellwert die Richtung nach oben bestimmt. Greift keiner der Schwellwerte, findet keine Anpassung statt. Überlappen sich die Schwellwerte, hat der obere Schwellwert Vorrang.
+
+Es ist in den meisten Fällen sinnvoll, beide Schwellwerte gleich zu halten. Dies gibt in der Regel das gewünschte Verhalten wieder. Sind die Werte weiter auseinander, bedeutet das, dass der Wertebereich zwischen beiden Schwellwerten keine Anpassung auslöst. Dadurch verhält es sich so, als wäre die Funktion "Dynamische Richtung" ausgeschaltet.
+
+Ein Verhindern, dass die Werte sich nicht überschneiden, ist in der ETS nicht möglich. Daher ist es so geregelt, dass der obere Schwellwert Vorrang vor dem unteren Schwellwert hat.
 

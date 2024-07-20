@@ -217,8 +217,8 @@
               <Union SizeInBit="32">
                 <Memory CodeSegment="%AID%_RS-04-00000" Offset="49" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%TT%%CC%061" Name="b%C%StatusFallbackTime"  Offset="0" BitOffset="0" ParameterType="%AID%_PT-StatusFallbackTime" Text="Verzögerung" Value="5" SuffixText="s"  />
-                <Parameter Id="%AID%_UP-%TT%%CC%063" Name="b%C%StatusThresholdHigh" Offset="2" BitOffset="0" ParameterType="%AID%_PT-ValueDpt5001" Text="Oberer Schwellwert" Value="60" SuffixText="%" />
-                <Parameter Id="%AID%_UP-%TT%%CC%064" Name="b%C%StatusThresholdLow"  Offset="3" BitOffset="0" ParameterType="%AID%_PT-ValueDpt5001" Text="Unterer Schwellwert" Value="20" SuffixText="%" />
+                <Parameter Id="%AID%_UP-%TT%%CC%063" Name="b%C%StatusThresholdHigh" Offset="2" BitOffset="0" ParameterType="%AID%_PT-ValueDpt5001" Text="Oberer Schwellwert" Value="50" SuffixText="%" />
+                <Parameter Id="%AID%_UP-%TT%%CC%064" Name="b%C%StatusThresholdLow"  Offset="3" BitOffset="0" ParameterType="%AID%_PT-ValueDpt5001" Text="Unterer Schwellwert" Value="50" SuffixText="%" />
               </Union>
             </Parameters>
             <ParameterRefs>
