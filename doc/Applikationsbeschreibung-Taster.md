@@ -99,10 +99,6 @@ Der 2fach-Taster ist der Klassiker für normale "Ein/Aus" bzw "Hoch/Runter"-Tast
 
 In diesem Modus werden die Auslösungen des Taster innerhalb einer Zeitspanne gezählt. Dabei kann der Einfach-, Doppel- sowie der Dreifach-Klick direkt mit einem Event versehen werden. Weitere Events (wie der Vierfach- oder Fünffach-Klick) sind in Kombination mit einer Logikengine machbar.
 
-#### **1-Tasten Dimmen** 
-
-Dieser spezielle Modus ermöglicht das Dimmen mit nur einer Taste. Dabei wird intern die nächste Dimmrichtung gespeichert. Standardmäßig wird dieser Wert nur bei einer Statusänderung (An/Aus) überschrieben. Über die dynamische Statusauswertung kann dieser Status abhängig von der Helligkeit gesteuert werden.
-
 <!-- DOC -->
 ### **Sperre**
 
