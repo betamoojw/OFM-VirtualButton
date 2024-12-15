@@ -136,7 +136,7 @@
 
               <ParameterType Id="%AID%_PT-BTNOutputDpt3007Single" Name="BTNOutputDpt3007Single">
                 <TypeRestriction Base="Value" SizeInBit="16">
-                  <Enumeration Text="1-Tasten Dimmmen"      Value="17"  Id="%ENID%" />
+                  <Enumeration Text="1-Tasten Dimmen"      Value="17"  Id="%ENID%" />
                   <Enumeration Text="Verringern, 100% (01)" Value="1"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 50% (02)"  Value="2"   Id="%ENID%" />
                   <Enumeration Text="Verringern, 25% (03)"  Value="3"   Id="%ENID%" />
